@@ -1,55 +1,77 @@
-<!doctype html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>マチユニ</title>
-</head>
-<body>
-<header>
-    <h2><a href="/">投稿フォーム</a></a></h2>
-    <nav>
-        <ul>
-            <li>エリア</li>
-            <li>検索</li>
-            <li><a href="/create">投稿</a></li>
-            <li><a href="/login">ログイン</a></li>
-        </ul>
-    </nav>
-</header>
-<div class="PostFomr">
-    <form method="POST" action="/posts">
-        <!-- CSRF保護 -->
-        @csrf
-        <select name="category" id="">
-            <option value="K-POP">K-POP</option>
-            <option value="J-POP">J-POP</option>
-        </select>
-        <input type="text" name="image_path" placeholder="画像パス" required value="testpath">
-        <input type="text" name="title" placeholder="タイトル" required>
-        <input type="text" name="content" placeholder="本文" required>
-        <select name="unit_status" id="">
-            <option value="1">新規募集</option>
-            <option value="2">メンバー追加</option>
-        </select>
-        <input type="text" name="prefecture" placeholder="東京・大阪" required>
-        <input type="text" name="area" placeholder="新宿・梅田" required>
-        <select name="gender" id="">
-            <option value="1">女性</option>
-            <option value="2">男性</option>
-            <option value="3">混合</option>
-        </select>
-        <input type="text" name="age" placeholder="20代～30代" required>
-        <input type="submit" value="投稿">
-    </form>
 
-</div>
-<footer>
-    <p>Heelturn.llc</p>
-</footer>
+@extends('layouts.app')
 
+@section('content')
 
-</body>
-</html>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-7 mt-5 mb-5 p-4" style="background-color: white";>
+                <form>
+                    <div class="form-group mb-4">
+                        <label for="InputTitle">タイトル</label>
+                        <input type="text" class="form-control" id="InputTitle" aria-describedby="titleHelp" placeholder="BTSのコピユニメンバー募集！">
+                        <small id="titleHelp" class="form-text text-muted">40文字以内でタイトルを入力してください。</small>
+                    </div>
+                        <div class="form-group mb-4">
+                        <label for="InputArea">募集内容</label>
+                        <input type="text" class="form-control" id="InputContent" placeholder="BTSのコピユニメンバー募集！">
+{{--                        <textarea name="" id="InputContent" cols="30" rows="10"></textarea>--}}
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="InputArea">カテゴリ</label>
+                        <select name="" id="">
+                            <option value="">K-POP</option>
+                            <option value="">J-POP</option>
+                            <option value="">アニソン</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="InputArea">募集目的</label>
+                        <select name="" id="">
+                            <option value="">新規ユニット作成</option>
+                            <option value="">追加メンバー募集</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="InputArea">都道府県</label>
+                        <select name="" id="">
+                            <option value="">東京</option>
+                            <option value="">大阪</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="InputArea">活動場所</label>
+                        <input type="text" class="form-control" id="InputArea" placeholder="新宿　スタジオ〇〇　月1回">
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="InputGender">性別</label>
+                        <select name="" id="">
+                            <option value="">女性</option>
+                            <option value="">男性</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="InputAge">募集年齢</label>
+                        <select name="" id="">
+                            <option value="">特に無し</option>
+                            <option value="">10代</option>
+                            <option value="">20代</option>
+                            <option value="">30代以上</option>
+                        </select>
+                        <span>～</span>
+                        <select name="" id="">
+                            <option value="">特に無し</option>
+                            <option value="">10代</option>
+                            <option value="">20代</option>
+                            <option value="">30代以上</option>
+                        </select>
+                    </div>
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-primary text-center">投稿する</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+@endsection

@@ -24,9 +24,13 @@
 </head>
 <body style="background-color: #F5F5F5;">
 
+@include('commons.header')
+
 <div>
     @yield('content')
 </div>
+
+@include('commons.footer')
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
