@@ -17,10 +17,9 @@ class PostsController extends Controller
         $posts = Post::all();
 
         //return response()->json($posts);
-//        return view('posts.index', [
-//            'posts' => $posts
-//        ]);
-        return view('posts.index');
+        return view('posts.index', [
+            'posts' => $posts
+        ]);
     }
 
     /**
