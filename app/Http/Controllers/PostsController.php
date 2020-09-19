@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostsController extends Controller
 {
@@ -13,7 +14,13 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+
+        //return response()->json($posts);
+//        return view('posts.index', [
+//            'posts' => $posts
+//        ]);
+        return view('posts.index');
     }
 
     /**
@@ -23,7 +30,8 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        //return view('posts.create');
+        return view('posts.create');
     }
 
     /**
@@ -34,7 +42,18 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Post;
+        $post -> image_path = $request -> image_path;
+        $post -> category = $request -> category;
+        $post -> title = $request -> title;
+        $post -> content = $request -> content;
+        $post -> unit_status = $request -> unit_status;
+        $post -> prefecture = $request -> prefecture;
+        $post -> gender = $request -> gender;
+        $post -> area = $request -> area;
+        $post -> age = $request -> age;
+        $post -> save();
+        return redirect('/');
     }
 
     /**
