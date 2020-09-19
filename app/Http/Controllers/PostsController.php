@@ -15,8 +15,7 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::all();
-
-        //return response()->json($posts);
+        //dd($posts);
         return view('posts.index', [
             'posts' => $posts
         ]);
