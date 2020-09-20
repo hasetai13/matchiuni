@@ -21,10 +21,21 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8 mt-3">
                     <form class="card-sm">
-                        <div class="row no-gutters align-items-center">
+                        <div class="row no-gutters align-items-center d-none d-md-flex">
                             <!--end of col-->
                             <div class="col mr-1">
                                 <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="グループ名・曲名で検索！">
+                            </div>
+                            <!--end of col-->
+                            <div class="col-auto">
+                                <button class="btn btn-success" type="submit">検索</button>
+                            </div>
+                            <!--end of col-->
+                        </div>
+                        <div class="row no-gutters align-items-center d-md-none">
+                            <!--end of col-->
+                            <div class="col mr-1">
+                                <input class="form-control form-control-borderless" type="search" placeholder="グループ名・曲名で検索！">
                             </div>
                             <!--end of col-->
                             <div class="col-auto">
