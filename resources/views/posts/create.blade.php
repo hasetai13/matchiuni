@@ -68,13 +68,6 @@
                             <option value="20">20代</option>
                             <option value="30">30代以上</option>
                         </select>
-                        <span>～</span>
-                        <select name="" id="" required>
-                            <option value="">募集年齢を選択</option>
-                            <option value="">10代</option>
-                            <option value="">20代</option>
-                            <option value="">30代以上</option>
-                        </select>
                     </div>
                     <div class="row justify-content-center">
                         <button type="submit" class="btn btn-primary text-center">投稿する</button>

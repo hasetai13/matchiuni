@@ -40,7 +40,7 @@
     </div>
 
     <!-- ここにページ毎のコンテンツを書く -->
-    <div class="container bg-color:">
+    <div class="container mb-5">
         <!-- search -->
         <h2 class="mt-5 mb-4">条件を指定して検索</h2>
         <form action="index.html" method="post" class="mb-4">
@@ -90,7 +90,8 @@
                 <p style="position: absolute; right: 10px; bottom: -20px;"><a href="">もっと見る</a></p>
             </div>
         </div>
-        <div class="row mb-5">
+        {{--        PC表示--}}
+        <div class="row mb-5 d-none d-md-flex">
             @if (count($posts) > 0)
                 @foreach($posts as $post)
                     <div class="col-12 col-md-3 mb-4">
@@ -109,119 +110,59 @@
             @endif
         </div>
 
-        <div class="row">
-            <h2 class="mt-5 mb-4 col-8">BTSのコピユニ</h2>
-            <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">
-                <p style="position: absolute; right: 10px; bottom: -20px;"><a href="">もっと見る</a></p>
-            </div>
-        </div>
-        <div class="row mb-5">
-            <div class="col-12 col-md-3 mb-4">
-                <div class="card" style="">
-                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">BTSのコピユニメンバー募集！</h5>
-                        <p class="card-text">大阪の梅田周辺でBTSのコピユニできるメンバー募集してます！今いるメンバーは全員初心者でダンスやったことない人でも気軽に参加できるグループだと思います！</p>
-                        <a href="#" class="card-link">大阪</a>
-                        <a href="#" class="card-link">追加募集</a>
-                        <a href="#" class="card-link">女20～30代</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 mb-4">
-                <div class="card" style="">
-                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">BTSのコピユニメンバー募集！</h5>
-                        <p class="card-text">大阪の梅田周辺でBTSのコピユニできるメンバー募集してます！今いるメンバーは全員初心者でダンスやったことない人でも気軽に参加できるグループだと思います！</p>
-                        <a href="#" class="card-link">大阪</a>
-                        <a href="#" class="card-link">追加募集</a>
-                        <a href="#" class="card-link">女20～30代</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 mb-4">
-                <div class="card" style="">
-                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">BTSのコピユニメンバー募集！</h5>
-                        <p class="card-text">大阪の梅田周辺でBTSのコピユニできるメンバー募集してます！今いるメンバーは全員初心者でダンスやったことない人でも気軽に参加できるグループだと思います！</p>
-                        <a href="#" class="card-link">大阪</a>
-                        <a href="#" class="card-link">追加募集</a>
-                        <a href="#" class="card-link">女20～30代</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 mb-4">
-                <div class="card" style="">
-                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">BTSのコピユニメンバー募集！</h5>
-                        <p class="card-text">大阪の梅田周辺でBTSのコピユニできるメンバー募集してます！今いるメンバーは全員初心者でダンスやったことない人でも気軽に参加できるグループだと思います！</p>
-                        <a href="#" class="card-link">大阪</a>
-                        <a href="#" class="card-link">追加募集</a>
-                        <a href="#" class="card-link">女20～30代</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <h2 class="mt-5 mb-4 col-8">東京のコピユニ</h2>
-            <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">
-                <p style="position: absolute; right: 10px; bottom: -20px;"><a href="">もっと見る</a></p>
-            </div>
-        </div>
-        <div class="row mb-5">
-            <div class="col-12 col-md-3 mb-4">
-                <div class="card" style="">
-                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">BTSのコピユニメンバー募集！</h5>
-                        <p class="card-text">大阪の梅田周辺でBTSのコピユニできるメンバー募集してます！今いるメンバーは全員初心者でダンスやったことない人でも気軽に参加できるグループだと思います！</p>
-                        <a href="#" class="card-link">大阪</a>
-                        <a href="#" class="card-link">追加募集</a>
-                        <a href="#" class="card-link">女20～30代</a>
+        {{--        SP表示--}}
+            @if (count($posts) > 0)
+                @foreach($posts as $post)
+                    <div class="row pb-2 d-md-none sidecard">
+                            <div class="col-4  img-hidden">
+                                <img src="img/63763396.jpg" alt="img" class="card-img-top img-fulied">
+                            </div>
+                            <div class="col-8">
+                                <h6 class="sidecard-title">{{ $post -> title }}</h6>
+                                <p class="sidecard-text">{{ $post -> content }}</p>
+                                <a href="#" class="sidecard-link">{{ $post -> prefecture }}</a>
+                                <a href="#" class="sidecard-link">{{ $post -> unit_status }}</a>
+                                <a href="#" class="sidecard-link">{{ $post -> unit_status }}</a>
+                                <a class="btn btn-primary btn-sm" href="posts/2" role="button">詳しく見る</a>
+                            </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 mb-4">
-                <div class="card" style="">
-                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">BTSのコピユニメンバー募集！</h5>
-                        <p class="card-text">大阪の梅田周辺でBTSのコピユニできるメンバー募集してます！今いるメンバーは全員初心者でダンスやったことない人でも気軽に参加できるグループだと思います！</p>
-                        <a href="#" class="card-link">大阪</a>
-                        <a href="#" class="card-link">追加募集</a>
-                        <a href="#" class="card-link">女20～30代</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 mb-4">
-                <div class="card" style="">
-                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">BTSのコピユニメンバー募集！</h5>
-                        <p class="card-text">大阪の梅田周辺でBTSのコピユニできるメンバー募集してます！今いるメンバーは全員初心者でダンスやったことない人でも気軽に参加できるグループだと思います！</p>
-                        <a href="#" class="card-link">大阪</a>
-                        <a href="#" class="card-link">追加募集</a>
-                        <a href="#" class="card-link">女20～30代</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 mb-4">
-                <div class="card" style="">
-                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">BTSのコピユニメンバー募集！</h5>
-                        <p class="card-text">大阪の梅田周辺でBTSのコピユニできるメンバー募集してます！今いるメンバーは全員初心者でダンスやったことない人でも気軽に参加できるグループだと思います！</p>
-                        <a href="#" class="card-link">大阪</a>
-                        <a href="#" class="card-link">追加募集</a>
-                        <a href="#" class="card-link">女20～30代</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                @endforeach
+            @endif
+
+{{--        <div class="row">--}}
+{{--            <h2 class="mt-5 mb-4 col-8">BTSのコピユニ</h2>--}}
+{{--            <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">--}}
+{{--                <p style="position: absolute; right: 10px; bottom: -20px;"><a href="">もっと見る</a></p>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="row mb-5 d-none d-md-block">--}}
+{{--            <div class="col-12 col-md-3 mb-4">--}}
+{{--                <div class="card" style="">--}}
+{{--                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">--}}
+{{--                    <div class="card-body">--}}
+{{--                        <h5 class="card-title">BTSのコピユニメンバー募集！</h5>--}}
+{{--                        <p class="card-text">大阪の梅田周辺でBTSのコピユニできるメンバー募集してます！今いるメンバーは全員初心者でダンスやったことない人でも気軽に参加できるグループだと思います！</p>--}}
+{{--                        <a href="#" class="card-link">大阪</a>--}}
+{{--                        <a href="#" class="card-link">追加募集</a>--}}
+{{--                        <a href="#" class="card-link">女20～30代</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+
+{{--        <div class="row mb-5 pb-2 d-md-none sidecard">--}}
+{{--            <div class="col-4  img-hidden">--}}
+{{--                <img src="img/63763396.jpg" alt="img" class="card-img-top img-fulied">--}}
+{{--            </div>--}}
+{{--            <div class="col-8">--}}
+{{--                <h6 class="sidecard-title">BTSのコピユニメンバー募集！</h6>--}}
+{{--                <p class="sidecard-text">大阪の梅田周辺でBTSのコピユニできるメンバー募集してます！今いるメンバーは全員初心者でダンスやったことない人でも気軽に参加できるグループだと思います！</p>--}}
+{{--                <a href="#" class="sidecard-link">大阪</a>--}}
+{{--                <a href="#" class="sidecard-link">メンバー追加</a>--}}
+{{--                <a href="#" class="sidecard-link">20代女性</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 {{--    end of container--}}
     </div>
 
