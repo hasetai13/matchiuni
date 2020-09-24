@@ -13,4 +13,6 @@
 
 Route::get('/', 'PostsController@index');
 
+Route::get('/search/', 'SearchController@index')->name('search');
+
 Route::resource('posts', 'PostsController');

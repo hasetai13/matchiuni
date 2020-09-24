@@ -62,6 +62,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
+        //URLからid取得して、モデルから該当のデータを取得する
         return view('posts.show');
     }
 
@@ -97,5 +98,14 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function search()
+    {
+        $posts = Post::all();
+        //dd($posts);
+        return view('posts.result', [
+            'posts' => $posts
+        ]);
     }
 }
