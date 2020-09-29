@@ -7,7 +7,7 @@
         <div class="container">
             <h2 class="text-white display-4 font-weight-bold d-none d-md-block">日本初のコピユニ掲示板サイト</h2>
             <h3 class="text-white font-weight-bold d-block d-md-none">日本初のコピユニ掲示板サイト</h3>
-            <h5 class="text-white">あなたが踊りたいコピユニが集まる・見つかる</h5>
+            <h5 class="text-white">あなたが踊りたいコピユニが集まる・見つかる！</h5>
         </div>
     </div>
 {{--    ファーストビュー--}}
