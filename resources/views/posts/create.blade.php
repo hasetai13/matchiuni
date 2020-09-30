@@ -9,10 +9,10 @@
                 <form method="post" action="/posts">
                     <!-- CSRF保護 -->
                     @csrf
-                    <div class="form-group mb-4">
-                        <label for="InputImagepath">画像パス</label>
-                        <input type="text" class="form-control" name="image_path" id="InputTitle" aria-describedby="titleHelp" placeholder="BTSのコピユニメンバー募集！" value="testpath" required>
-                    </div>
+{{--                    <div class="form-group mb-4">--}}
+{{--                        <label for="InputImagepath">画像パス</label>--}}
+{{--                        <input type="text" class="form-control" name="image_path" id="InputTitle" aria-describedby="titleHelp" placeholder="BTSのコピユニメンバー募集！" value="testpath" required>--}}
+{{--                    </div>--}}
                     <div class="form-group mb-4">
                         <label for="InputTitle">タイトル</label>
                         <input type="text" class="form-control" name="title" id="InputTitle" aria-describedby="titleHelp" placeholder="BTSのコピユニメンバー募集！" required>

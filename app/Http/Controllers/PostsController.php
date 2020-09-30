@@ -15,7 +15,6 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::all();
-        //dd($posts);
         return view('posts.index', [
             'posts' => $posts
         ]);
@@ -63,7 +62,11 @@ class PostsController extends Controller
     public function show($id)
     {
         //URLからid取得して、モデルから該当のデータを取得する
-        return view('posts.show');
+        $post = Post::find($id);
+        //dd($posts);
+        return view('posts.show', [
+            'post' => $post
+        ]);
     }
 
     /**
@@ -99,13 +102,5 @@ class PostsController extends Controller
     {
         //
     }
-
-    public function search()
-    {
-        $posts = Post::all();
-        //dd($posts);
-        return view('posts.result', [
-            'posts' => $posts
-        ]);
-    }
+    
 }

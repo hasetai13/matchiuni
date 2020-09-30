@@ -21,21 +21,21 @@
             <hr class="clearfix w-100 d-md-none">
 
             <!-- Grid column -->
-            <div class="col-md-2 mx-auto">
+{{--            <div class="col-md-2 mx-auto">--}}
 
-                <!-- Links -->
-                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">エリア</h5>
+{{--                <!-- Links -->--}}
+{{--                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">エリア</h5>--}}
 
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="/search/?area=東京">東京</a>
-                    </li>
-                    <li>
-                        <a href="/search/?area=大阪">大阪</a>
-                    </li>
-                </ul>
+{{--                <ul class="list-unstyled">--}}
+{{--                    <li>--}}
+{{--                        <a href="/search/?area=東京">東京</a>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <a href="/search/?area=大阪">大阪</a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
 
-            </div>
+{{--            </div>--}}
             <!-- Grid column -->
 
         </div>

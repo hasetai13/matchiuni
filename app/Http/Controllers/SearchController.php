@@ -15,9 +15,15 @@ class SearchController extends Controller
     public function index(Request $request)
     {
         $query = Post::query();
-        $search1 = $request->input('prefecture');
-        if ($request->has('prefecture') && $search1 != ('')) {
-            $query->where('prefecture', $search1)->get();
+        $keyword = $request->input('keyword');
+        $prefecture = $request->input('prefecture');
+        if ($request->has('keyword') && $keyword != ('')) {
+            $query->where('title', 'LIKE', "%{$keyword}%")
+                  ->orwhere('content', 'LIKE', "%{$keyword}%")
+                  ->get();
+        }
+        if ($request->has('prefecture') && $prefecture != ('')) {
+            $query->where('prefecture', $prefecture)->get();
         }
         $posts = $query->paginate(10);
         return view('posts.result', [
