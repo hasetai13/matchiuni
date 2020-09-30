@@ -88,21 +88,27 @@
                 <div class="myform form ">
                     <div class="logo mb-3">
                         <div class="col-md-12 text-center">
-                            <h2>ログイン</h2>
+                            <h2>アカウント作成</h2>
                         </div>
                     </div>
                     <form action="" method="post" name="login">
                         <div class="form-group">
-                            <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="メールアドレス">
+                            <label for="exampleInputEmail1">ユーザー名</label>
+                            <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="例）マチユニ太郎">
                         </div>
                         <div class="form-group">
-                            <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="パスワード">
+                            <label for="exampleInputEmail1">メールアドレス</label>
+                            <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="PC・スマホどちらでも可">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">パスワード</label>
+                            <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="4文字以上のパスワード">
                         </div>
                         <div class="col-md-12 text-center ">
-                            <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">ログイン</button>
+                            <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">この情報で登録する</button>
                         </div>
                         <div class="form-group mt-3">
-                            <p class="text-center"><a href="/signup" id="signup">アカウントをお持ちでない方はこちら</a></p>
+                            <p class="text-center"><a href="/login" id="signup">アカウントをお持ちの方はこちら</a></p>
                         </div>
                         <div class="form-group mt-3">
                             <p class="text-center"><a href="/" id="signup">トップへ戻る</a></p>

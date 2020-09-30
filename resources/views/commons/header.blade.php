@@ -18,10 +18,10 @@
                 投稿する
             </a>
         </div>
-{{--        <div>--}}
-{{--            <a href="/posts/create">--}}
-{{--                ログイン--}}
-{{--            </a>--}}
-{{--        </div>--}}
+        <div>
+            <a href="/login">
+                ログイン
+            </a>
+        </div>
     </div>
 </header>
