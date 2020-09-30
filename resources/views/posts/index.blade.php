@@ -20,8 +20,35 @@
                 <h3 class="font-weight-bold">MatchiUni(マチユニ)で簡単にコピユニを結成・参加！</h3>
             </div>
         </div>
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-danger btn-block">参加する</button>
+            </div>
+            <div class="col-6 col-md-3">
+                <button type="submit" class="btn btn-danger btn-block">結成する</button>
+            </div>
+        </div>
     </div>
 {{--    キャッチコピー--}}
+
+
+
+<div class="autoplay">
+    <div><img src="img/osaka.jpg"></div>
+    <div><img src="img/osaka.jpg"></div>
+    <div><img src="img/osaka.jpg"></div>
+    <div><img src="img/osaka.jpg"></div>
+    <div><img src="img/osaka.jpg"></div>
+    <div><img src="img/osaka.jpg"></div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+<script type="text/javascript">
+    $('.autoplay').slick();
+</script>
+
 
 
 {{--    メインコンテンツ--}}
