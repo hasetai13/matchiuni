@@ -32,25 +32,6 @@
 {{--    キャッチコピー--}}
 
 
-
-<div class="autoplay">
-    <div><img src="img/osaka.jpg"></div>
-    <div><img src="img/osaka.jpg"></div>
-    <div><img src="img/osaka.jpg"></div>
-    <div><img src="img/osaka.jpg"></div>
-    <div><img src="img/osaka.jpg"></div>
-    <div><img src="img/osaka.jpg"></div>
-</div>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-
-<script type="text/javascript">
-    $('.autoplay').slick();
-</script>
-
-
-
 {{--    メインコンテンツ--}}
     <div class="container mt-5 mb-5">
         <div class="row justify-content-center">
