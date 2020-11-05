@@ -18,10 +18,18 @@
                 投稿する
             </a>
         </div>
-        <div>
-            <a href="/login">
-                ログイン
-            </a>
-        </div>
+        @if (Auth::check())
+            <div>
+                <a href="/logout">
+                    ログアウト
+                </a>
+            </div>
+        @else
+            <div>
+                <a href="/login">
+                    ログイン
+                </a>
+            </div>
+        @endif
     </div>
 </header>

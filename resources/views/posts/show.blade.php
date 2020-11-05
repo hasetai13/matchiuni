@@ -5,11 +5,8 @@
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-7 mt-5 mb-5 p-4" style="background-color: white";>
+            <div class="col-12 col-md-7  mb-5 p-4" style="background-color: white";>
                 <h2 class="text-center">{{ $post -> title }}</h2>
-                <div class="col-12">
-                    <img class="card-img-top" src="/img/63763396.jpg" alt="Card image cap">
-                </div>
                 <div class="col-12">
                     <table class="table table-sm table-bordered">
                         <tbody>

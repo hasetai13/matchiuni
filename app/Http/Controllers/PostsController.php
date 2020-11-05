@@ -12,13 +12,25 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+    //    ▼デバッグ用コード
+    public function index(Request $request)
     {
         $posts = Post::all();
         return view('posts.index', [
-            'posts' => $posts
+            'posts' => $posts,
+            'debug' => $request
         ]);
     }
+
+//    ▼デバッグ終わったらコメントアウト外す
+//    public function index()
+//    {
+//        $posts = Post::all();
+//        return view('posts.index', [
+//            'posts' => $posts,
+//        ]);
+//    }
 
     /**
      * Show the form for creating a new resource.

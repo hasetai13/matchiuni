@@ -20,7 +20,7 @@
                 <h3 class="font-weight-bold">MatchiUni(マチユニ)で簡単にコピユニを結成・参加！</h3>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row mt-2 justify-content-center">
             <div class="col-6 col-md-3">
                 <button type="submit" class="btn btn-danger btn-block">参加する</button>
             </div>
@@ -170,62 +170,6 @@
                         <a href="/search/"><button type="button" class="btn btn-danger  btn-block">もっと見る</button></a>
                     </div>
                 </div>
-
-
-
-
-
-{{--                <div class="seachbyIdol">--}}
-{{--                    <div class="row">--}}
-{{--                        <h5 class="mt-5 mb-4 col-8">アイドル別で探す</h5>--}}
-{{--                        <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">--}}
-{{--                            <p style="position: absolute; right: 10px; bottom: -20px;"><a href="">もっと見る</a></p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="row">--}}
-{{--                        <div class="img col-3">--}}
-{{--                            <img src="/img/osaka.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="col-3 text-center">--}}
-{{--                            <p class="">東京都</p>--}}
-{{--                        </div>--}}
-{{--                        <div class="img col-3">--}}
-{{--                            <img src="/img/osaka.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="col-3 text-center">--}}
-{{--                            <p>大阪府</p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="row mt-4">--}}
-{{--                        <div class="img col-3">--}}
-{{--                            <img src="/img/osaka.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="col-3 text-center">--}}
-{{--                            <p class="">東京都</p>--}}
-{{--                        </div>--}}
-{{--                        <div class="img col-3">--}}
-{{--                            <img src="/img/osaka.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="col-3 text-center">--}}
-{{--                            <p>大阪府</p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="row mt-4">--}}
-{{--                        <div class="img col-3">--}}
-{{--                            <img src="/img/osaka.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="col-3 text-center">--}}
-{{--                            <p class="">東京都</p>--}}
-{{--                        </div>--}}
-{{--                        <div class="img col-3">--}}
-{{--                            <img src="/img/osaka.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="col-3 text-center">--}}
-{{--                            <p>大阪府</p>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-
 
 
 
