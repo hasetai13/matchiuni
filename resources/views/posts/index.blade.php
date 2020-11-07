@@ -22,10 +22,10 @@
         </div>
         <div class="row mt-2 justify-content-center">
             <div class="col-6 col-md-3">
-                <button type="submit" class="btn btn-danger btn-block">探す</button>
+                <a href="/search"><button type="submit" class="btn btn-danger btn-block">コピユニを探す</button></a>
             </div>
             <div class="col-6 col-md-3">
-                <button type="submit" class="btn btn-danger btn-block">結成する</button>
+                <a href="/posts/create"><button type="submit" class="btn btn-danger btn-block">コピユニを作る</button></a>
             </div>
         </div>
     </div>
