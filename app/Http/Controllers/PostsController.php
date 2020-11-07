@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Illuminate\Support\Facades\Auth;
 
 class PostsController extends Controller
 {
@@ -39,8 +40,9 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //return view('posts.create');
-        return view('posts.create');
+        if (\Auth::check()) {
+            return view('posts.create');
+        }
     }
 
     /**
@@ -61,6 +63,7 @@ class PostsController extends Controller
         $post -> gender = $request -> gender;
         $post -> area = $request -> area;
         $post -> age = $request -> age;
+        $post -> user_id = Auth::user()->id;
         $post -> save();
         return redirect('/');
     }

@@ -34,6 +34,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// ユーザ機能
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('posts', 'PostsController', ['only' => ['create', 'store']]); //投稿フォームと投稿
+});
