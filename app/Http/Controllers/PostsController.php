@@ -17,7 +17,7 @@ class PostsController extends Controller
     //    ▼デバッグ用コード
     public function index(Request $request)
     {
-        $posts = Post::all();
+        $posts = Post::take(3)->orderBy('updated_at', 'desc')->get();
         return view('posts.index', [
             'posts' => $posts,
             'debug' => $request

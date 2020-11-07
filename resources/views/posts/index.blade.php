@@ -125,7 +125,7 @@
                 <div class="row mb-5 d-none d-md-flex">
                     @if (count($posts) > 0)
                         @foreach($posts as $post)
-                            <div class="col-12 col-md-3 mb-4">
+                            <div class="col-12 col-md-4 mb-4">
                                 <div class="card" style="">
                                     <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
                                     <div class="card-body">
