@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-7 p-4">
-                <form action="post" method="post">
+                <form action="/posts" method="post">
                     <!-- CSRF保護 -->
                     @csrf
                     <div class="mt-2 mb-4">
@@ -15,7 +15,7 @@
                                 <div class="form-group">
                                     <label for="InputTitle">タイトル/本文</label>
                                     <input type="text" class="form-control" name="title" id="InputTitle" aria-describedby="titleHelp" placeholder="BTSのコピユニメンバー募集！" required>
-                                    <textarea class="form-control mt-2" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                    <textarea class="form-control mt-2" name="content" id="exampleFormControlTextarea1" rows="5"></textarea>
                                     <small id="titleHelp" class="form-text text-muted">40文字以内でタイトルを入力。</small>
                                 </div>
                                 <div class="form-group">
@@ -73,18 +73,18 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="InputTitle">活動場所/頻度</label>
-                                    <input type="text" class="form-control" name="title" id="InputTitle" aria-describedby="titleHelp" placeholder="梅田BLOCK 週1回" required>
+                                    <input type="text" class="form-control" name="area" id="InputTitle" aria-describedby="titleHelp" placeholder="梅田BLOCK 週1回" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="InputTitle">性別</label>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="option1" checked>
                                         <label class="form-check-label" for="exampleRadios1">
                                             女性
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="option2">
                                         <label class="form-check-label" for="exampleRadios2">
                                             男性
                                         </label>
@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="InputTitle">年齢</label>
-                                    <select class="custom-select" name="prefecture">
+                                    <select class="custom-select" name="age">
                                         <option selected value="">年齢を選択</option>
                                         <option value="tokyo">10代</option>
                                         <option value="osaka">20代</option>

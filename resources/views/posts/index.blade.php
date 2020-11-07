@@ -7,7 +7,7 @@
         <div class="container">
             <h2 class="text-white display-4 font-weight-bold d-none d-md-block">日本初のコピユニ掲示板サイト</h2>
             <h4 class="text-white font-weight-bold d-block d-md-none">日本初のコピユニ掲示板サイト</h4>
-            <h5 class="text-white">あなたが踊りたいコピユニが集まる・見つかる！</h5>
+            <h4 class="text-white">あなたが踊りたいコピユニが集まる・見つかる！</h4>
         </div>
     </div>
 {{--    ファーストビュー--}}
@@ -190,16 +190,11 @@
                     @foreach($posts as $post)
                         <div class="row pb-2 d-md-none sidecard">
                             <a href="/posts/{{ $post -> id }}" style="color: black;">
-                                {{--                            <div class="col-4  img-hidden">--}}
-                                {{--                                <img src="img/63763396.jpg" alt="img" class="card-img-top img-fulied">--}}
-                                {{--                            </div>--}}
                                 <div class="col-12">
                                     <h6 class="sidecard-title">{{ $post -> title }}</h6>
-                                    <p>{{ $post -> content }}</p>
-                                    {{--                                <a href="#" class="sidecard-link">{{ $post -> prefecture }}</a>--}}
-                                    {{--                                <a href="#" class="sidecard-link">{{ $post -> unit_status }}</a>--}}
-                                    {{--                                <a href="#" class="sidecard-link">{{ $post -> unit_status }}</a>--}}
-                                    {{--                                <a href="/posts/{{ $post -> id }}"><button class="btn btn-rounded btn-default btn-sm">気になる!</button></a>--}}
+                                    <a href="#" class="sidecard-link">{{ $post -> prefecture }}</a>
+                                    <a href="#" class="sidecard-link">{{ $post -> unit_status }}</a>
+                                    <a href="#" class="sidecard-link">{{ $post -> unit_status }}</a>
                                 </div>
                             </a>
                         </div>
