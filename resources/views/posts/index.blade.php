@@ -22,7 +22,7 @@
         </div>
         <div class="row mt-2 justify-content-center">
             <div class="col-6 col-md-3">
-                <button type="submit" class="btn btn-danger btn-block">参加する</button>
+                <button type="submit" class="btn btn-danger btn-block">探す</button>
             </div>
             <div class="col-6 col-md-3">
                 <button type="submit" class="btn btn-danger btn-block">結成する</button>
