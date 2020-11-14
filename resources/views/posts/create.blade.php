@@ -78,13 +78,13 @@
                                 <div class="form-group">
                                     <label for="InputTitle">性別</label>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="option1" checked>
+                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="female" checked>
                                         <label class="form-check-label" for="exampleRadios1">
                                             女性
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="option2">
+                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="male">
                                         <label class="form-check-label" for="exampleRadios2">
                                             男性
                                         </label>
@@ -95,9 +95,9 @@
                                     <label for="InputTitle">年齢</label>
                                     <select class="custom-select" name="age">
                                         <option selected value="">年齢を選択</option>
-                                        <option value="tokyo">10代</option>
-                                        <option value="osaka">20代</option>
-                                        <option value="osaka">30代以上</option>
+                                        <option value="10">10代</option>
+                                        <option value="20">20代</option>
+                                        <option value="other">30代以上</option>
                                     </select>
                                     <small id="titleHelp" class="form-text text-muted">募集するメンバーの年齢を選択</small>
                                 </div>
