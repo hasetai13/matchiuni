@@ -34,9 +34,9 @@
                         <div class="col-8">
                             <select class="custom-select" name="age">
                                 <option value="" selected>年齢を選択</option>
-                                <option value="10">10代</option>
-                                <option value="20">20代</option>
-                                <option value="other">30代以上</option>
+                                @foreach($ages as $age)
+                                    <option value="{{ $age }}" @if($request->age == $age ) selected @endif >{{ $age . '代' }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

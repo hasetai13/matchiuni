@@ -15,6 +15,9 @@ class SearchController extends Controller
     public function index(Request $request)
     {
         $prefs = config('pref');
+        $ages  = config('age');
+
+
         $query = Post::query();
 
         $keyword = $request->input('keyword');
@@ -46,7 +49,8 @@ class SearchController extends Controller
         return view('posts.result', [
             'posts' => $posts,
             'request' => $request,
-            'prefs' => $prefs
+            'prefs' => $prefs,
+            'ages' => $ages
         ]);
 
     }
