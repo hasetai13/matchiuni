@@ -35,7 +35,7 @@
 {{--    メインコンテンツ--}}
     <div class="container mt-5 mb-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-9">
                 {{--    キーワード検索--}}
                 <div class="row justify-content-center">
                     <div class="col-12">
