@@ -14,20 +14,39 @@ class SearchController extends Controller
      */
     public function index(Request $request)
     {
+        $prefs = config('pref');
         $query = Post::query();
+
         $keyword = $request->input('keyword');
         $prefecture = $request->input('prefecture');
-        if ($request->has('keyword') && $keyword != ('')) {
-            $query->where('title', 'LIKE', "%{$keyword}%")
-                  ->orwhere('content', 'LIKE', "%{$keyword}%")
-                  ->get();
-        }
+        $age = $request->input('age');
+        $gender = $request->input('gender');
+
+
+//        if ($request->has('keyword') && $keyword != ('')) {
+//            $query->where('title', 'LIKE', "%{$keyword}%")
+//                  ->orwhere('content', 'LIKE', "%{$keyword}%")
+//                  ->orwhere('prefecture', 'LIKE', "%{$keyword}%")
+//                  ->orwhere('area', 'LIKE', "%{$keyword}%")
+//                  ->orderBy('updated_at', 'desc')
+//                  ->get();
+//        }
+
+
         if ($request->has('prefecture') && $prefecture != ('')) {
-            $query->where('prefecture', $prefecture)->get();
+            $query->where('prefecture', $prefecture);
         }
-        $posts = $query->paginate(10);
+        if ($request->has('age') && $age != ('')) {
+            $query->where('age', $age);
+        }
+        if ($request->has('gender') && $gender != ('')) {
+            $query->where('gender', $gender);
+        }
+        $posts = $query->get();
         return view('posts.result', [
-            'posts' => $posts
+            'posts' => $posts,
+            'request' => $request,
+            'prefs' => $prefs
         ]);
 
     }
