@@ -22,7 +22,7 @@
                             <select class="custom-select" name="prefecture">
                                 <option value="" selected>都道府県を選択</option>
                                 @foreach($prefs as $pref)
-                                    <option value="{{ $pref }}">{{ old('prefecture') }}</option>
+                                    <option value="{{ $pref }}" @if($request->prefecture == $pref ) selected @endif >{{ $pref }}</option>
                                 @endforeach
                             </select>
                         </div>
