@@ -15,23 +15,13 @@ class PostsController extends Controller
      */
 
     //    ▼デバッグ用コード
-    public function index(Request $request)
+    public function index()
     {
-        $posts = Post::take(3)->orderBy('updated_at', 'desc')->get();
+        $posts = Post::take(10)->orderBy('updated_at', 'desc')->get();
         return view('posts.index', [
-            'posts' => $posts,
-            'debug' => $request
+            'posts' => $posts
         ]);
     }
-
-//    ▼デバッグ終わったらコメントアウト外す
-//    public function index()
-//    {
-//        $posts = Post::all();
-//        return view('posts.index', [
-//            'posts' => $posts,
-//        ]);
-//    }
 
     /**
      * Show the form for creating a new resource.
@@ -55,10 +45,10 @@ class PostsController extends Controller
     {
         $post = new Post;
         $post -> image_path = $request -> image_path;
-        $post -> category = $request -> category;
+//        $post -> category = $request -> category;
         $post -> title = $request -> title;
         $post -> content = $request -> content;
-        $post -> unit_status = $request -> unit_status;
+//        $post -> unit_status = $request -> unit_status;
         $post -> prefecture = $request -> prefecture;
         $post -> gender = $request -> gender;
         $post -> area = $request -> area;
@@ -78,7 +68,6 @@ class PostsController extends Controller
     {
         //URLからid取得して、モデルから該当のデータを取得する
         $post = Post::find($id);
-        //dd($posts);
         return view('posts.show', [
             'post' => $post
         ]);
