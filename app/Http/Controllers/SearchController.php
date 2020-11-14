@@ -23,14 +23,14 @@ class SearchController extends Controller
         $gender = $request->input('gender');
 
 
-//        if ($request->has('keyword') && $keyword != ('')) {
-//            $query->where('title', 'LIKE', "%{$keyword}%")
-//                  ->orwhere('content', 'LIKE', "%{$keyword}%")
-//                  ->orwhere('prefecture', 'LIKE', "%{$keyword}%")
-//                  ->orwhere('area', 'LIKE', "%{$keyword}%")
-//                  ->orderBy('updated_at', 'desc')
-//                  ->get();
-//        }
+        if ($request->has('keyword') && $keyword != ('')) {
+            $query->where('title', 'LIKE', "%{$keyword}%")
+                  ->orwhere('content', 'LIKE', "%{$keyword}%")
+                  ->orwhere('prefecture', 'LIKE', "%{$keyword}%")
+                  ->orwhere('area', 'LIKE', "%{$keyword}%")
+                  ->orderBy('updated_at', 'desc')
+                  ->get();
+        }
 
 
         if ($request->has('prefecture') && $prefecture != ('')) {

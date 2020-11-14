@@ -45,7 +45,7 @@
                             <h5>性別</h5>
                         </div>
                         <div class="col-8">
-                            <select class="custom-select" name="age">
+                            <select class="custom-select" name="gender">
                                 <option value="" selected>性別を選択</option>
                                 <option value="female">女性</option>
                                 <option value="male">男性</option>
@@ -57,7 +57,7 @@
                             <h5>キーワード</h5>
                         </div>
                         <div class="col-8">
-                            <input class="form-control form-control-borderless" name="keyword" type="search" placeholder="グループ名・曲名で検索！">
+                            <input class="form-control form-control-borderless" name="keyword" type="search" placeholder="グループ名・曲名で検索！" value="{{ $request->keyword }}">
                         </div>
                     </div>
                     <div class="row mt-3">
