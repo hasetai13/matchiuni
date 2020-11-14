@@ -47,8 +47,9 @@
                         <div class="col-8">
                             <select class="custom-select" name="gender">
                                 <option value="" selected>性別を選択</option>
-                                <option value="female">女性</option>
-                                <option value="male">男性</option>
+                                @foreach($genders as $gender)
+                                    <option value="{{ $gender }}" @if($request->gender == $gender ) selected @endif >{{ $gender }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

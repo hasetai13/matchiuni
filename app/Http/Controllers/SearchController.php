@@ -16,6 +16,7 @@ class SearchController extends Controller
     {
         $prefs = config('pref');
         $ages  = config('age');
+        $genders  = config('gender');
 
 
         $query = Post::query();
@@ -50,7 +51,8 @@ class SearchController extends Controller
             'posts' => $posts,
             'request' => $request,
             'prefs' => $prefs,
-            'ages' => $ages
+            'ages' => $ages,
+            'genders' => $genders
         ]);
 
     }

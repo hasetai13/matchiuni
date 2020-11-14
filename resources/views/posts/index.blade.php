@@ -140,8 +140,8 @@
                                 <div class="col-8">
                                     <select class="custom-select" name="gender">
                                         <option selected value="">性別を選択</option>
-                                        <option value="female">女性</option>
-                                        <option value="male">男性</option>
+                                        <option value="女性">女性</option>
+                                        <option value="男性">男性</option>
                                     </select>
                                 </div>
                             </div>
