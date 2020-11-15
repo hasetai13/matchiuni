@@ -187,7 +187,7 @@
 {{--                </div>--}}
                 {{--    ▲カード　最近投稿されたコピユニ--}}
 
-                {{--    ▼test slick--}}
+                {{--    ▼カード　最近投稿されたコピユニ--}}
                 <div class="swiper-container container pt-1 pr-1 pl-1 pb-1">
                     <div class="swiper-wrapper">
                         @if (count($posts) > 0)
@@ -195,21 +195,23 @@
                                 <div class="swiper-slide">
                                     <div class="row">
                                         <div class="col-12">
-                                            <div class="card">
-                                                <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
-                                                <div class="card-body">
-                                                    <p class="card-title">{{ $post -> title }}</p>
-                                                    <div>
-                                                        <span href="#" class="card-link">{{ $post -> prefecture }}</span>
-                                                    </div>
-                                                    <div>
-                                                        <span href="#" class="card-link">{{ $post -> age . '代' }}</span>
-                                                    </div>
-                                                    <div>
-                                                        <span href="#" class="card-link">{{ $post -> gender }}</span>
+                                            <a href="/posts/{{ $post -> id }}">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
+                                                    <div class="card-body">
+                                                        <p class="card-title">{{ $post -> title }}</p>
+                                                        <div>
+                                                            <span href="#" class="card-link">{{ $post -> prefecture }}</span>
+                                                        </div>
+                                                        <div>
+                                                            <span href="#" class="card-link">{{ $post -> age . '代' }}</span>
+                                                        </div>
+                                                        <div>
+                                                            <span href="#" class="card-link">{{ $post -> gender }}</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -222,7 +224,7 @@
 {{--                    <div class="swiper-button-next swiper-button-black"></div>--}}
                 </div>
                 <!-- end of .swiper-container.flex -->
-                {{--    ▲test slick--}}
+                {{--    ▲カード　最近投稿されたコピユニ--}}
 
                 {{--    ▼もっと見るボタン　最近投稿されたコピユニ--}}
 {{--                <div class="row mt-3 justify-content-center">--}}
