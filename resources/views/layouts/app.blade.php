@@ -37,15 +37,10 @@
     <link rel="stylesheet" href="/css/jpn.min.css">
     <!-- ▲jpn.CSS -->
 
-    <!-- ▼css of slick -->
-    <link rel="stylesheet" type="text/css" href="./css/slick.css">
-    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css">
-    <!-- ▲css of slick -->
 
-    <!-- ▼js of slick -->
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script src="./js/slick.js" type="text/javascript" charset="utf-8"></script>
-    <!-- ▲js of slick -->
+    <!-- ▼JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- ▲JQuery -->
 
     <!-- ▼css of swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/css/swiper.min.css">
@@ -53,20 +48,27 @@
 </head>
 <body>
 
+    <!-- ▼header -->
     @include('commons.header')
+    <!-- ▲header -->
 
-    <div>
-        @yield('content')
-    </div>
+    <!-- ▼main content -->
+    @yield('content')
+    <!-- ▲main content -->
 
+    <!-- ▼footer -->
     @include('commons.footer')
+    <!-- ▲footer -->
 
+    <!-- ▼style -->
+    @yield('style')
+    <!-- ▲style -->
+
+    <!-- ▼javasctipt  -->
     @yield('script')
+    <!-- ▲javasctipt  -->
 
 
-    <!-- ▼JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- ▲JQuery -->
 
     <!-- ▼Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>

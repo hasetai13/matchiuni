@@ -6,9 +6,9 @@
 {{--    ▼ファーストビュー--}}
     <div class="jumbotron jumbackground text-center" style="background-image: url('/img/637633961.jpg'); background-size: cover;  background-position:50% 65%;">
         <div class="container">
-            <h2 class="text-white display-4 font-weight-bold d-none d-md-block">日本初のコピユニ掲示板サイト</h2>
-            <h4 class="text-white font-weight-bold d-block d-md-none">日本初のコピユニ掲示板サイト</h4>
-            <h4 class="text-white">あなたが踊りたいコピユニが集まる・見つかる！</h4>
+            <h3 class="text-white display-4 font-weight-bold d-none d-md-block">みんなで踊れば、ステージはさらに楽しくなる</h3>
+            <h5 class="text-white font-weight-bold d-block d-md-none">みんなで踊れば、ステージはさらに楽しくなる</h5>
+            <p class="text-white">イベント応募からコピユニ募集まで、<br>コピユニライフはすべてここだけで完結。</p>
         </div>
     </div>
 {{--    ▲ファーストビュー--}}
@@ -160,32 +160,14 @@
 
                 {{--    ▼見出し　最近投稿されたコピユニ--}}
                 <div class="row">
-                    <h5 class="mt-5 mb-4 col-8"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/></svg></span> 最近投稿されたのコピユニ</h5>
+                    <h5 class="mt-5 mb-4 col-8"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/></svg></span> 最近投稿されたコピユニ</h5>
                     <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">
                         <p style="position: absolute; right: 10px; bottom: -20px;"><a href="/search">もっと見る</a></p>
                     </div>
                 </div>
                 {{--    ▲見出し　最近投稿されたコピユニ--}}
 
-                {{--    ▼カード　最近投稿されたコピユニ--}}
-{{--                <div class="row mb-5 d-md-flex">--}}
-{{--                    @if (count($posts) > 0)--}}
-{{--                        @foreach($posts as $post)--}}
-{{--                            <div class="col-6 col-md-4 mb-4">--}}
-{{--                                <div class="card">--}}
-{{--                                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">--}}
-{{--                                    <div class="card-body">--}}
-{{--                                        <h5 class="card-title">{{ $post -> title }}</h5>--}}
-{{--                                        <span href="#" class="card-link">{{ $post -> prefecture }}</span>--}}
-{{--                                        <span href="#" class="card-link">{{ $post -> age . '代' }}</span>--}}
-{{--                                        <span href="#" class="card-link">{{ $post -> gender }}</span>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        @endforeach--}}
-{{--                    @endif--}}
-{{--                </div>--}}
-                {{--    ▲カード　最近投稿されたコピユニ--}}
+
 
                 {{--    ▼カード　最近投稿されたコピユニ--}}
                 <div class="swiper-container container pt-1 pr-1 pl-1 pb-1">
@@ -226,6 +208,8 @@
                 <!-- end of .swiper-container.flex -->
                 {{--    ▲カード　最近投稿されたコピユニ--}}
 
+
+
                 {{--    ▼もっと見るボタン　最近投稿されたコピユニ--}}
 {{--                <div class="row mt-3 justify-content-center">--}}
 {{--                    <div class="col-7">--}}
@@ -233,6 +217,284 @@
 {{--                    </div>--}}
 {{--                </div>--}}
                 {{--    ▲もっと見るボタン　最近投稿されたコピユニ--}}
+
+
+
+                {{--    ▼見出し　注目が集まっているコピユニ--}}
+                <div class="row">
+                    <h5 class="mt-5 mb-4 col-8"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/></svg></span> 注目が集まっているコピユニ</h5>
+                    <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">
+                        <p style="position: absolute; right: 10px; bottom: -20px;"><a href="/search">もっと見る</a></p>
+                    </div>
+                </div>
+                {{--    ▲見出し　注目が集まっているコピユニ--}}
+
+
+
+                {{--    ▼カード　注目が集まっているコピユニ--}}
+                <div class="swiper-container container pt-1 pr-1 pl-1 pb-1">
+                    <div class="swiper-wrapper">
+                        @if (count($posts) > 0)
+                            @foreach($posts as $post)
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="/posts/{{ $post -> id }}">
+                                                <div class="card">
+                                                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
+                                                    <div class="card-body">
+                                                        <p class="card-title">{{ $post -> title }}</p>
+                                                        <div>
+                                                            <span href="#" class="card-link">{{ $post -> prefecture }}</span>
+                                                        </div>
+                                                        <div>
+                                                            <span href="#" class="card-link">{{ $post -> age . '代' }}</span>
+                                                        </div>
+                                                        <div>
+                                                            <span href="#" class="card-link">{{ $post -> gender }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
+                    <!-- end of .swiper-wrapper -->
+                    <div class="swiper-pagination"></div>
+                    {{--                    <div class="swiper-button-prev swiper-button-black"></div>--}}
+                    {{--                    <div class="swiper-button-next swiper-button-black"></div>--}}
+                </div>
+                <!-- end of .swiper-container.flex -->
+                {{--    ▲カード　注目が集まっているコピユニ--}}
+
+
+
+                {{--    ▼もっと見るボタン　注目が集まっているコピユニ--}}
+                {{--                <div class="row mt-3 justify-content-center">--}}
+                {{--                    <div class="col-7">--}}
+                {{--                        <a href="/search/"><button type="button" class="btn btn-danger  btn-block">もっと見る</button></a>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
+                {{--    ▲もっと見るボタン　注目が集まっているコピユニ--}}
+
+                {{--    ▼見出し　エリア選択--}}
+                <div class="row">
+                    <h5 class="mt-5 mb-4 col-8"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/></svg></span> エリアで探す</h5>
+                    <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">
+{{--                        <p style="position: absolute; right: 10px; bottom: -20px;"><a href="/search">もっと見る</a></p>--}}
+                    </div>
+                </div>
+                {{--    ▲見出し　エリア選択--}}
+
+                {{--    ▼エリア選択--}}
+                <div class="area">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-8"><img src="https://placehold.jp/150x150.png" alt=""></div>
+                                <div class="col-4 d-flex align-items-center">東京</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-8"><img src="https://placehold.jp/150x150.png" alt=""></div>
+                                <div class="col-4 d-flex align-items-center">大阪</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{--    ▲エリア選択}}
+
+
+                {{--    ▼見出し　BTSのコピユニ--}}
+                <div class="row">
+                    <h5 class="mt-5 mb-4 col-8"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/></svg></span> BTSのコピユニ</h5>
+                    <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">
+                        {{--                        <p style="position: absolute; right: 10px; bottom: -20px;"><a href="/search">もっと見る</a></p>--}}
+                    </div>
+                </div>
+                {{--    ▲見出し　BTSのコピユニ--}}
+
+                {{--    ▼BTSのコピユニ--}}
+                <div class="area">
+                    <div class="media mb-2">
+                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold">Media heading</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                            vulputate at,
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold">Media heading</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                            vulputate at,
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold">Media heading</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                            vulputate at,
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold">Media heading</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                            vulputate at,
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold">Media heading</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                            vulputate at,
+                        </div>
+                    </div>
+                </div>
+                {{--    ▲BTSのコピユニ}}
+
+                {{--    ▼もっと見るボタン　注目が集まっているコピユニ--}}
+                <div class="row mt-3 justify-content-center">
+                    <div class="col-7">
+                        <a href="/search/"><button type="button" class="btn btn-danger  btn-block">もっと見る</button></a>
+                    </div>
+                </div>
+                {{--    ▲もっと見るボタン　注目が集まっているコピユニ--}}
+
+
+
+                {{--    ▼見出し　BTSのコピユニ--}}
+                <div class="row">
+                    <h5 class="mt-5 mb-4 col-8"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/></svg></span> TWICEのコピユニ</h5>
+                    <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">
+                        {{--                        <p style="position: absolute; right: 10px; bottom: -20px;"><a href="/search">もっと見る</a></p>--}}
+                    </div>
+                </div>
+                {{--    ▲見出し　BTSのコピユニ--}}
+
+                {{--    ▼BTSのコピユニ--}}
+                <div class="area">
+                    <div class="media mb-2">
+                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold">Media heading</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                            vulputate at,
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold">Media heading</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                            vulputate at,
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold">Media heading</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                            vulputate at,
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold">Media heading</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                            vulputate at,
+                        </div>
+                    </div>
+                    <div class="media mb-2">
+                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder1.jpg" alt="Generic placeholder image">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold">Media heading</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                            vulputate at,
+                        </div>
+                    </div>
+                </div>
+                {{--    ▲BTSのコピユニ}}
+
+                {{--    ▼もっと見るボタン　注目が集まっているコピユニ--}}
+                <div class="row mt-3 justify-content-center">
+                    <div class="col-7">
+                        <a href="/search/"><button type="button" class="btn btn-danger  btn-block">もっと見る</button></a>
+                    </div>
+                </div>
+                {{--    ▲もっと見るボタン　注目が集まっているコピユニ--}}
+
+
+
+                {{--    ▼見出し　エリア選択--}}
+                <div class="row">
+                    <h5 class="mt-5 mb-4 col-8"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/></svg></span> アイドルから探す</h5>
+                    <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">
+                    <p style="position: absolute; right: 20px; bottom: -20px;"><a href="/search">もっと見る</a></p>
+                    </div>
+                </div>
+                {{--    ▲見出し　エリア選択--}}
+
+                {{--    ▼エリア選択--}}
+                <div class="area">
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-8"><img src="https://placehold.jp/150x150.png" alt=""></div>
+                                <div class="col-4 d-flex align-items-center">東京</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-8"><img src="https://placehold.jp/150x150.png" alt=""></div>
+                                <div class="col-4 d-flex align-items-center">大阪</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-8"><img src="https://placehold.jp/150x150.png" alt=""></div>
+                                <div class="col-4 d-flex align-items-center">東京</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-8"><img src="https://placehold.jp/150x150.png" alt=""></div>
+                                <div class="col-4 d-flex align-items-center">大阪</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-8"><img src="https://placehold.jp/150x150.png" alt=""></div>
+                                <div class="col-4 d-flex align-items-center">東京</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-8"><img src="https://placehold.jp/150x150.png" alt=""></div>
+                                <div class="col-4 d-flex align-items-center">大阪</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{--    ▲エリア選択}}
+
+
+
 
                 {{--    ▼サービス説明--}}
                 <div class="explain">
@@ -255,7 +517,7 @@
                             <p>マチユニにコピユニ募集を掲載することで興味を持った人からコメントが貰える！</p>
                         </div>
                         <div class="col-12 mt-4">
-                            <h5>②コピユニを参加する！</h5>
+                            <h5>②コピユニに参加する！</h5>
                             <p>興味のあるコピユニがあれば気軽にコメントを送って参加しよう！</p>
                         </div>
                     </div>

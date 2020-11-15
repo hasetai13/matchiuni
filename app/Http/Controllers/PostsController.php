@@ -66,10 +66,13 @@ class PostsController extends Controller
      */
     public function show($id)
     {
+        $posts = Post::take(5)->orderBy('updated_at', 'desc')->get();
+
         //URLからid取得して、モデルから該当のデータを取得する
         $post = Post::find($id);
         return view('posts.show', [
-            'post' => $post
+            'post' => $post,
+            'posts' => $posts,
         ]);
     }
 
