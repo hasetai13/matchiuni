@@ -2,7 +2,8 @@
 
 @section('content')
 
-{{--    ファーストビュー--}}
+
+{{--    ▼ファーストビュー--}}
     <div class="jumbotron jumbackground text-center" style="background-image: url('/img/637633961.jpg'); background-size: cover;  background-position:50% 65%;">
         <div class="container">
             <h2 class="text-white display-4 font-weight-bold d-none d-md-block">日本初のコピユニ掲示板サイト</h2>
@@ -10,10 +11,10 @@
             <h4 class="text-white">あなたが踊りたいコピユニが集まる・見つかる！</h4>
         </div>
     </div>
-{{--    ファーストビュー--}}
+{{--    ▲ファーストビュー--}}
 
 
-{{--    キャッチコピー--}}
+{{--    ▼キャッチコピー--}}
     <div class="container text-center">
         <div class="row">
             <div class="col-12">
@@ -29,14 +30,15 @@
             </div>
         </div>
     </div>
-{{--    キャッチコピー--}}
+{{--    ▲キャッチコピー--}}
 
 
-{{--    メインコンテンツ--}}
+{{--    ▼メインコンテンツ--}}
     <div class="container mt-5 mb-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-9">
-                {{--    キーワード検索--}}
+
+                {{--    ▼キーワード検索--}}
                 <div class="row justify-content-center">
                     <div class="col-12">
                         <h5><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/></svg></span>「グループ・曲名」からコピユニを探す</h5>
@@ -52,9 +54,9 @@
                         </form>
                     </div>
                 </div>
-                {{--    キーワード検索--}}
+                {{--    ▲キーワード検索--}}
 
-                {{--    条件検索--}}
+                {{--    ▼条件検索--}}
                 <div class="con-search mt-5">
                     <div class="row">
                         <div class="col-12">
@@ -153,65 +155,84 @@
                         </div>
                     </form>
                 </div>
+                {{--    ▲条件検索--}}
 
 
-
-                {{--    投稿コンテンツ--}}
+                {{--    ▼見出し　最近投稿されたコピユニ--}}
                 <div class="row">
-                    <h5 class="mt-5 mb-4 col-8"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/></svg></span> 新着のコピユニ</h5>
-{{--                    <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">--}}
-{{--                        <p style="position: absolute; right: 10px; bottom: -20px;"><a href="">もっと見る</a></p>--}}
-{{--                    </div>--}}
-                </div>
-                {{--        PC表示--}}
-                <div class="row mb-5 d-none d-md-flex">
-                    @if (count($posts) > 0)
-                        @foreach($posts as $post)
-                            <div class="col-12 col-md-4 mb-4">
-                                <div class="card" style="">
-                                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ $post -> title }}</h5>
-                                        <p class="card-text">{{ $post -> content }}</p>
-                                        <a href="#" class="card-link">{{ $post -> prefecture }}</a>
-                                        <a href="#" class="card-link">{{ $post -> unit_status }}</a>
-                                        <a href="#" class="card-link">{{ $post -> unit_status }}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    @endif
-                </div>
-                {{--        PC表示--}}
-
-
-                {{--        SP表示--}}
-                @if (count($posts) > 0)
-                    @foreach($posts as $post)
-                        <div class="row pb-2 d-md-none sidecard">
-                            <a href="/posts/{{ $post -> id }}" style="color: black;">
-                                <div class="col-12">
-                                    <h6 class="sidecard-title">{{ $post -> title }}</h6>
-                                    <a href="#" class="sidecard-link">{{ $post -> prefecture }}</a>
-                                    <a href="#" class="sidecard-link">{{ $post -> unit_status }}</a>
-                                    <a href="#" class="sidecard-link">{{ $post -> unit_status }}</a>
-                                </div>
-                            </a>
-                        </div>
-                    @endforeach
-                @endif
-
-
-                <div class="row mt-3 justify-content-center">
-                    <div class="col-7">
-                        <a href="/search/"><button type="button" class="btn btn-danger  btn-block">もっと見る</button></a>
+                    <h5 class="mt-5 mb-4 col-8"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z"/></svg></span> 最近投稿されたのコピユニ</h5>
+                    <div class="mt-5 mb-4 col-4 text-right" style="position: relative;">
+                        <p style="position: absolute; right: 10px; bottom: -20px;"><a href="/search">もっと見る</a></p>
                     </div>
                 </div>
+                {{--    ▲見出し　最近投稿されたコピユニ--}}
 
+                {{--    ▼カード　最近投稿されたコピユニ--}}
+{{--                <div class="row mb-5 d-md-flex">--}}
+{{--                    @if (count($posts) > 0)--}}
+{{--                        @foreach($posts as $post)--}}
+{{--                            <div class="col-6 col-md-4 mb-4">--}}
+{{--                                <div class="card">--}}
+{{--                                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">--}}
+{{--                                    <div class="card-body">--}}
+{{--                                        <h5 class="card-title">{{ $post -> title }}</h5>--}}
+{{--                                        <span href="#" class="card-link">{{ $post -> prefecture }}</span>--}}
+{{--                                        <span href="#" class="card-link">{{ $post -> age . '代' }}</span>--}}
+{{--                                        <span href="#" class="card-link">{{ $post -> gender }}</span>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        @endforeach--}}
+{{--                    @endif--}}
+{{--                </div>--}}
+                {{--    ▲カード　最近投稿されたコピユニ--}}
 
+                {{--    ▼test slick--}}
+                <div class="swiper-container container pt-1 pr-1 pl-1 pb-1">
+                    <div class="swiper-wrapper">
+                        @if (count($posts) > 0)
+                            @foreach($posts as $post)
+                                <div class="swiper-slide">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <p class="card-title">{{ $post -> title }}</p>
+                                                    <div>
+                                                        <span href="#" class="card-link">{{ $post -> prefecture }}</span>
+                                                    </div>
+                                                    <div>
+                                                        <span href="#" class="card-link">{{ $post -> age . '代' }}</span>
+                                                    </div>
+                                                    <div>
+                                                        <span href="#" class="card-link">{{ $post -> gender }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
+                    </div>
+                    <!-- end of .swiper-wrapper -->
+                    <div class="swiper-pagination"></div>
+{{--                    <div class="swiper-button-prev swiper-button-black"></div>--}}
+{{--                    <div class="swiper-button-next swiper-button-black"></div>--}}
+                </div>
+                <!-- end of .swiper-container.flex -->
+                {{--    ▲test slick--}}
 
+                {{--    ▼もっと見るボタン　最近投稿されたコピユニ--}}
+{{--                <div class="row mt-3 justify-content-center">--}}
+{{--                    <div class="col-7">--}}
+{{--                        <a href="/search/"><button type="button" class="btn btn-danger  btn-block">もっと見る</button></a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+                {{--    ▲もっと見るボタン　最近投稿されたコピユニ--}}
 
-
+                {{--    ▼サービス説明--}}
                 <div class="explain">
                     <div class="row">
                         <h4 class="mt-5 mb-4 col-12">MatchiUni（マチユニ）とは？</h4>
@@ -243,10 +264,34 @@
                         </div>
                     </div>
                 </div>
+                {{--    ▲サービス説明--}}
             </div>
         </div>
     </div>
-{{--    メインコンテンツ--}}
+{{--    ▲メインコンテンツ--}}
 
+@endsection
 
+@section('script')
+    <script>
+        $(document).ready(function(){
+            let swiper= new Swiper('.swiper-container', {
+                slidesPerView: 2.3,
+                spaceBetween: 20,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    767: {
+                        slidesPerView: 4,
+                    }
+                }
+            });
+        });
+    </script>
 @endsection

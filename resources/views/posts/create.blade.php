@@ -78,13 +78,13 @@
                                 <div class="form-group">
                                     <label for="InputTitle">性別</label>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="female" checked>
+                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="女性" checked>
                                         <label class="form-check-label" for="exampleRadios1">
                                             女性
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="male">
+                                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="男性">
                                         <label class="form-check-label" for="exampleRadios2">
                                             男性
                                         </label>
