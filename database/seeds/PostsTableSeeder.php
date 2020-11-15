@@ -33,9 +33,9 @@ class PostsTableSeeder extends Seeder
 記載の上ご連絡ください！",
             'prefecture' => "東京都",
             'area' => "新宿　東京ドーム",
-            'gender' => "female",
+            'gender' => "女性",
             'age' => "10",
-            'user_id' => 1
+            'user_id' => 2
         ]);
     }
 }
