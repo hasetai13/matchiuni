@@ -197,7 +197,7 @@
                                         <div class="col-12">
                                             <a href="/posts/{{ $post -> id }}">
                                                 <div class="card">
-                                                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">
+                                                    <img class="card-img-top" src="uploads/{{ $post -> image_path }}" alt="Card image cap">
                                                     <div class="card-body">
                                                         <p class="card-title">{{ $post -> title }}</p>
                                                         <div>
