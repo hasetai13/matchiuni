@@ -43,8 +43,19 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        //▼画像アップロード
+        if ($file = $request -> file_path) {
+            $fileName = time().'.'.$file->getClientOriginalExtension();
+            $target_path = public_path('/uploads/');
+            $file->move($target_path,$fileName);
+        }else{
+            $fileName = 'noimage.png';
+        }
+
+        //▲画像アップロード
+
         $post = new Post;
-        $post -> image_path = $request -> image_path;
+        $post -> image_path = $fileName;
 //        $post -> category = $request -> category;
         $post -> title = $request -> title;
         $post -> content = $request -> content;
