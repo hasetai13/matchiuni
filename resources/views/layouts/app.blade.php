@@ -32,20 +32,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!-- ▲Google Fonts -->
 
-
     <!-- ▼jpn.CSS -->
     <link rel="stylesheet" href="/css/jpn.min.css">
     <!-- ▲jpn.CSS -->
-
-    <!-- ▼css of slick -->
-    <link rel="stylesheet" type="text/css" href="./css/slick.css">
-    <link rel="stylesheet" type="text/css" href="./css/slick-theme.css">
-    <!-- ▲css of slick -->
-
-    <!-- ▼js of slick -->
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script src="./js/slick.js" type="text/javascript" charset="utf-8"></script>
-    <!-- ▲js of slick -->
 
     <!-- ▼css of swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/css/swiper.min.css">
@@ -55,13 +44,9 @@
 
     @include('commons.header')
 
-    <div>
-        @yield('content')
-    </div>
+    @yield('content')
 
     @include('commons.footer')
-
-    @yield('script')
 
 
     <!-- ▼JQuery -->
@@ -84,6 +69,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/js/swiper.min.js"></script>
     <!-- ▲js of swiper -->
 
+    <!-- ▼original javasctipt -->
+    @yield('script')
+    <!-- ▲original javasctipt -->
 
 </body>
 </html>
