@@ -13,6 +13,10 @@
                         <div class="row mb-1">
                             <div class="col-12">
                                 <div class="form-group">
+                                    <label for="photo">画像ファイル:</label>
+                                    <input type="file" class="form-control" name="file">
+                                </div>
+                                <div class="form-group">
                                     <label for="InputTitle">タイトル/本文</label>
                                     <input type="text" class="form-control" name="title" id="InputTitle" aria-describedby="titleHelp" placeholder="BTSのコピユニメンバー募集！" required>
                                     <textarea class="form-control mt-2" name="content" id="exampleFormControlTextarea1" rows="5"></textarea>
