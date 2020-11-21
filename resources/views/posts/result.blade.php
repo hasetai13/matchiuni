@@ -84,7 +84,7 @@
             @foreach($posts as $post)
                 <div class="row pb-2 sidecard">
                     <div class="col-4  img-hidden">
-                        <img src="/img/63763396.jpg" alt="img" class="card-img-top img-fulied">
+                        <img src="/uploads/{{ $post -> image_path }}" alt="img" class="card-img-top img-fulied">
                     </div>
                     <div class="col-8">
                         <h6 class="sidecard-title">{{ $post -> title }}</h6>
