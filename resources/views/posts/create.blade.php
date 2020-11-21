@@ -6,16 +6,26 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-7 p-4">
-                <form action="/posts" method="post">
+                <form action="/posts" method="post" enctype="multipart/form-data">
                     <!-- CSRF保護 -->
                     @csrf
+
+
                     <div class="mt-2 mb-4">
                         <div class="row mb-1">
                             <div class="col-12">
+                                <div class="input-group">
+                                    <label class="input-group-btn">
+                                        <span class="btn btn-primary">
+                                            画像を選択<input type="file" name="file_path" style="display:none">
+                                        </span>
+                                    </label>
+                                    <input type="text" class="form-control" readonly="">
+                                </div>
                                 <div class="form-group">
                                     <label for="InputTitle">タイトル/本文</label>
                                     <input type="text" class="form-control" name="title" id="InputTitle" aria-describedby="titleHelp" placeholder="BTSのコピユニメンバー募集！" required>
-                                    <textarea class="form-control mt-2" name="content" id="exampleFormControlTextarea1" rows="5"></textarea>
+                                    <textarea class="form-control mt-2" name="content" id="exampleFormControlTextarea1" rows="5" required></textarea>
                                     <small id="titleHelp" class="form-text text-muted">40文字以内でタイトルを入力。</small>
                                 </div>
                                 <div class="form-group">
@@ -115,4 +125,15 @@
         </div>
     </div>
 
+@endsection
+
+@section('script')
+    <script>
+        $(document).on('change', ':file', function() {
+            var input = $(this),
+                numFiles = input.get(0).files ? input.get(0).files.length : 1,
+                label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+            input.parent().parent().next(':text').val(label);
+        });
+    </script>
 @endsection
