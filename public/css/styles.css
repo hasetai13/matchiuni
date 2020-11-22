@@ -41,11 +41,11 @@ header div:first-child{
 }
 
 .swiper-container .card-img, .card-img-top, .card-img-bottom {
-    height: 110px;
+    height: 100px;
 }
 
 .swiper-container .card-body {
-    height: 170px;
+    height: 160px;
     padding: 0.7rem;
 }
 
@@ -53,6 +53,7 @@ header div:first-child{
     /*border: solid 1px red;*/
     height: 60%;
     font-size: 0.7rem;
+    margin: 0;
     padding: 0;
 }
 
@@ -124,3 +125,11 @@ header div:first-child{
     font-size: 0.75rem;
     pointer-events: none;
   }
+
+/*カードのスタイル*/
+
+
+/*各コンテンツのスタイル*/
+.group-section span {
+    font-size: 0.875rem;
+}
