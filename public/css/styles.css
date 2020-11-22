@@ -1,6 +1,5 @@
 html {
     font-size: 16px;
-
     @media (min-width: 600px) {
         font-size: 18px;
     }
@@ -8,6 +7,10 @@ html {
     @media (min-width: 800px) {
         font-size: 20px;
     }
+}
+
+a {
+    color: black;
 }
 
 
@@ -31,6 +34,42 @@ header div:first-child{
 /*ヘッダーのスタイル*/
 
 
+/*オリジナルbootsrapのスタイル*/
+
+.btn {
+    padding: .84rem 2rem;
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+    height: 110px;
+}
+
+.swiper-container .card-body {
+    height: 170px;
+    padding: 0.7rem;
+}
+
+.swiper-container .card-title {
+    /*border: solid 1px red;*/
+    height: 60%;
+    font-size: 0.7rem;
+    padding: 0;
+}
+
+
+.swiper-container .card .card-lists {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.swiper-container .card .card-list {
+    font-size: 11px;
+}
+
+/*オリジナルbootsrapのスタイル*/
 
 .fixed_btn
 {
