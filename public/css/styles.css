@@ -40,9 +40,7 @@ header div:first-child{
     padding: .84rem 2rem;
 }
 
-.card-img,
-.card-img-top,
-.card-img-bottom {
+.swiper-container .card-img, .card-img-top, .card-img-bottom {
     height: 110px;
 }
 
