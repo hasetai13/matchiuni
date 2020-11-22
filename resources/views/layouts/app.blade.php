@@ -32,11 +32,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!-- ▲Google Fonts -->
 
-
     <!-- ▼jpn.CSS -->
     <link rel="stylesheet" href="/css/jpn.min.css">
     <!-- ▲jpn.CSS -->
-
 
     <!-- ▼JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -69,7 +67,6 @@
     <!-- ▲javasctipt  -->
 
 
-
     <!-- ▼Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <!-- ▲Bootstrap tooltips -->
@@ -86,6 +83,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/js/swiper.min.js"></script>
     <!-- ▲js of swiper -->
 
+    <!-- ▼original javasctipt -->
+    @yield('script')
+    <!-- ▲original javasctipt -->
 
 </body>
 </html>
