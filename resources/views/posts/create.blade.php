@@ -107,7 +107,7 @@
                                         <option selected value="">年齢を選択</option>
                                         <option value="10">10代</option>
                                         <option value="20">20代</option>
-                                        <option value="other">30代以上</option>
+                                        <option value="30">30代以上</option>
                                     </select>
                                     <small id="titleHelp" class="form-text text-muted">募集するメンバーの年齢を選択</small>
                                 </div>
