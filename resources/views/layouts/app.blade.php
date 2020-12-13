@@ -36,22 +36,36 @@
     <link rel="stylesheet" href="/css/jpn.min.css">
     <!-- ▲jpn.CSS -->
 
+    <!-- ▼JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- ▲JQuery -->
+
     <!-- ▼css of swiper -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/css/swiper.min.css">
     <!-- ▲css of swiper -->
 </head>
 <body>
 
+    <!-- ▼header -->
     @include('commons.header')
+    <!-- ▲header -->
 
+    <!-- ▼main content -->
     @yield('content')
+    <!-- ▲main content -->
 
+    <!-- ▼footer -->
     @include('commons.footer')
+    <!-- ▲footer -->
 
+    <!-- ▼style -->
+    @yield('style')
+    <!-- ▲style -->
 
-    <!-- ▼JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- ▲JQuery -->
+    <!-- ▼javasctipt  -->
+    @yield('script')
+    <!-- ▲javasctipt  -->
+
 
     <!-- ▼Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>

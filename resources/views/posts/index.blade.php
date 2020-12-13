@@ -6,9 +6,9 @@
 {{--    ▼ファーストビュー--}}
     <div class="jumbotron jumbackground text-center" style="background-image: url('/img/637633961.jpg'); background-size: cover;  background-position:50% 65%;">
         <div class="container">
-            <h2 class="text-white display-4 font-weight-bold d-none d-md-block">日本初のコピユニ掲示板サイト</h2>
-            <h4 class="text-white font-weight-bold d-block d-md-none">日本初のコピユニ掲示板サイト</h4>
-            <h4 class="text-white">あなたが踊りたいコピユニが集まる・見つかる！</h4>
+            <h3 class="text-white display-4 font-weight-bold d-none d-md-block">みんなで踊れば、ステージはさらに楽しくなる</h3>
+            <h5 class="text-white font-weight-bold d-block d-md-none">みんなで踊れば、ステージはさらに楽しくなる</h5>
+            <p class="text-white">イベント応募からコピユニ募集まで、<br>コピユニライフはすべてここだけで完結。</p>
         </div>
     </div>
 {{--    ▲ファーストビュー--}}
@@ -167,25 +167,7 @@
                 </div>
                 {{--    ▲見出し　最近投稿されたコピユニ--}}
 
-                {{--    ▼カード　最近投稿されたコピユニ--}}
-{{--                <div class="row mb-5 d-md-flex">--}}
-{{--                    @if (count($posts) > 0)--}}
-{{--                        @foreach($posts as $post)--}}
-{{--                            <div class="col-6 col-md-4 mb-4">--}}
-{{--                                <div class="card">--}}
-{{--                                    <img class="card-img-top" src="img/63763396.jpg" alt="Card image cap">--}}
-{{--                                    <div class="card-body">--}}
-{{--                                        <h5 class="card-title">{{ $post -> title }}</h5>--}}
-{{--                                        <span href="#" class="card-link">{{ $post -> prefecture }}</span>--}}
-{{--                                        <span href="#" class="card-link">{{ $post -> age . '代' }}</span>--}}
-{{--                                        <span href="#" class="card-link">{{ $post -> gender }}</span>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        @endforeach--}}
-{{--                    @endif--}}
-{{--                </div>--}}
-                {{--    ▲カード　最近投稿されたコピユニ--}}
+
 
                 {{--    ▼カード　最近投稿されたコピユニ--}}
                 <div class="swiper-container container pt-1 pr-1 pl-1 pb-1">
@@ -221,6 +203,8 @@
                 </div>
                 <!-- end of .swiper-container.flex -->
                 {{--    ▲カード　最近投稿されたコピユニ--}}
+
+
 
                 {{--    ▼もっと見るボタン　最近投稿されたコピユニ--}}
 {{--                <div class="row mt-3 justify-content-center">--}}
@@ -330,7 +314,6 @@
                 <!-- end of .swiper-container.flex -->
                 {{--    ▲カード　最近投稿されたコピユニ--}}
 
-
                 {{--    ▼サービス説明--}}
                 <div class="explain">
                     <div class="row">
@@ -352,7 +335,7 @@
                             <p>マチユニにコピユニ募集を掲載することで興味を持った人からコメントが貰える！</p>
                         </div>
                         <div class="col-12 mt-4">
-                            <h5>②コピユニを参加する！</h5>
+                            <h5>②コピユニに参加する！</h5>
                             <p>興味のあるコピユニがあれば気軽にコメントを送って参加しよう！</p>
                         </div>
                     </div>
