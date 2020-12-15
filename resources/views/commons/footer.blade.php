@@ -1,6 +1,6 @@
 
 <!-- Footer -->
-<footer class="page-footer font-small stylish-color-dark pt-4 mt-5">
+<footer class="page-footer font-small stylish-color-dark pt-4 mt-3">
 
     <!-- Footer Links -->
     <div class="container text-center text-md-left">

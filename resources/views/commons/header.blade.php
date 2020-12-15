@@ -25,7 +25,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 {{--                        <a class="dropdown-item" href="#">アカウント</a>--}}
-                        <a class="dropdown-item" href="#">自分の投稿</a>
+{{--                        <a class="dropdown-item" href="#">自分の投稿</a>--}}
 {{--                        <a class="dropdown-item" href="#">お気に入り</a>--}}
                         <a class="dropdown-item" href="/logout">ログアウト</a>
                     </div>

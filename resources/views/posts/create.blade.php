@@ -11,30 +11,37 @@
                     @csrf
 
 
+                    {{-- エラーメッセージ --}}
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                <li>文字数を超えている項目があります</li>
+                            </ul>
+                        </div>
+                    @endif
+
+
                     <div class="mt-2 mb-4">
                         <div class="row mb-1">
                             <div class="col-12">
                                 <div class="input-group">
                                     <label class="input-group-btn">
                                         <span class="btn btn-primary">
-                                            画像を選択<input type="file" name="file_path" style="display:none">
+                                            画像を選択<input type="file" name="file_path" style="display:none;">
                                         </span>
                                     </label>
-                                    <input type="text" class="form-control" readonly="">
+                                    <input type="text" class="form-control" readonly="" style="margin-top:6px;">
                                 </div>
                                 <div class="form-group">
-                                    <label for="photo">画像ファイル:</label>
-                                    <input type="file" class="form-control" name="file">
-                                </div>
-                                <div class="form-group">
-                                    <label for="InputTitle">タイトル/本文</label>
+                                    <label for="InputTitle">タイトル/本文<span>*</span></label>
                                     <input type="text" class="form-control" name="title" id="InputTitle" aria-describedby="titleHelp" placeholder="BTSのコピユニメンバー募集！" required>
-                                    <textarea class="form-control mt-2" name="content" id="exampleFormControlTextarea1" rows="5" required></textarea>
-                                    <small id="titleHelp" class="form-text text-muted">40文字以内でタイトルを入力。</small>
+                                    <small id="titleHelp" class="form-text text-muted">40文字以内でタイトルを入力。現在の文字数：<span class="ShowCntTitle">0</span>文字</small>
+                                    <textarea class="form-control mt-2" name="content" id="InputContent" rows="5" required></textarea>
+                                    <small id="titleHelp" class="form-text text-muted">191文字以内で本文を入力。現在の文字数：<span class="ShowCntContent">0</span>文字</small>
                                 </div>
                                 <div class="form-group">
-                                    <label for="InputTitle">都道府県</label>
-                                    <select class="custom-select" name="prefecture">
+                                    <label for="InputTitle">都道府県<span>*</span></label>
+                                    <select class="custom-select" name="prefecture" required>
                                         <option value="" selected>都道府県を選択</option>
                                         <option value="北海道">北海道</option>
                                         <option value="青森県">青森県</option>
@@ -86,11 +93,12 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="InputTitle">活動場所/頻度</label>
-                                    <input type="text" class="form-control" name="area" id="InputTitle" aria-describedby="titleHelp" placeholder="梅田BLOCK 週1回" required>
+                                    <label for="InputTitle">活動場所/頻度<span>*</span></label>
+                                    <input type="text" class="form-control" name="area" id="InputArea" aria-describedby="titleHelp" placeholder="梅田BLOCK 週1回" required>
+                                    <small id="titleHelp" class="form-text text-muted">20文字以内で本文を入力。現在の文字数：<span class="ShowCntArea">0</span>文字</small>
                                 </div>
                                 <div class="form-group">
-                                    <label for="InputTitle">性別</label>
+                                    <label for="InputTitle">性別<span>*</span></label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="女性" checked>
                                         <label class="form-check-label" for="exampleRadios1">
@@ -106,8 +114,8 @@
                                     <small id="titleHelp" class="form-text text-muted">募集するメンバーの性別を選択</small>
                                 </div>
                                 <div class="form-group">
-                                    <label for="InputTitle">年齢</label>
-                                    <select class="custom-select" name="age">
+                                    <label for="InputTitle">年齢<span>*</span></label>
+                                    <select class="custom-select" name="age" required>
                                         <option selected value="">年齢を選択</option>
                                         <option value="10">10代</option>
                                         <option value="20">20代</option>
@@ -121,7 +129,7 @@
                     <button type="submit" class="btn btn-danger btn-block">投稿する</button>
                     <div class="row mt-3">
                         <div class="col-12 text-center">
-                            <a href="/">トップに戻る</a>
+                            <a href="/">＞トップに戻る</a>
                         </div>
                     </div>
                 </form>
@@ -138,6 +146,19 @@
                 numFiles = input.get(0).files ? input.get(0).files.length : 1,
                 label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
             input.parent().parent().next(':text').val(label);
+        });
+
+        $('#InputTitle').keyup(function() {
+            let cnt = $(this).val().length;
+            $('.ShowCntTitle').text(cnt);
+        });
+        $('#InputContent').keyup(function() {
+            let cnt = $(this).val().length;
+            $('.ShowCntContent').text(cnt);
+        });
+        $('#InputArea').keyup(function() {
+            let cnt = $(this).val().length;
+            $('.ShowCntArea').text(cnt);
         });
     </script>
 @endsection

@@ -46,7 +46,8 @@ class SearchController extends Controller
         if ($request->has('gender') && $gender != ('')) {
             $query->where('gender', $gender);
         }
-        $posts = $query->get();
+        $posts = $query->orderBy('updated_at', 'desc')->get();
+//        $posts = Post::take(10)->orderBy('updated_at', 'desc')->get();
         return view('posts.result', [
             'posts' => $posts,
             'request' => $request,

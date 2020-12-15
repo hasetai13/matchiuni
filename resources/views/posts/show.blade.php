@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('content')
@@ -7,6 +6,9 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-7  mb-5 p-4">
                 <h5 class="text-center">{{ $post -> title }}</h5>
+                <div class="row justify-content-center mt-3 mb-3">
+                    <img src="/uploads/{{ $post -> image_path }}" alt="img" class="card-img-top col-6" style="object-fit: cover;">
+                </div>
                 <table class="table table-sm table-bordered">
                     <tbody>
                     <tr>
@@ -23,13 +25,21 @@
                     </tr>
                     <tr>
                         <th scope="row">年齢</th>
-                        <td>{{ $post -> age }}</td>
+                        <td>{{ $post -> age }}代</td>
                     </tr>
                     </tbody>
-                    </table>
-                    <p>{!! nl2br($post -> content) !!}</p>
+                </table>
+                <p>{!! nl2br($post -> content) !!}</p>
             </div>
         </div>
+
+{{--        <div class="row mb-4">--}}
+{{--            <div class="col-12 text-center">--}}
+{{--                <a href="/search"><span class="font-weight-bold">＞</span> 検索結果に戻る</a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+
+
         <div class="row justify-content-center">
             <div class="col-12 col-md-7">
                 <h4>関連するコピユニ</h4>
@@ -42,18 +52,14 @@
                                         <div class="col-12">
                                             <a href="/posts/{{ $post -> id }}">
                                                 <div class="card">
-                                                    <img class="card-img-top" src="/img/63763396.jpg" alt="Card image cap">
+                                                    <img class="card-img-top" style="object-fit: cover;" src="/uploads/{{ $post -> image_path }}" alt="Card image cap">
                                                     <div class="card-body">
                                                         <p class="card-title">{{ $post -> title }}</p>
-                                                        <div>
-                                                            <span href="#" class="card-link">{{ $post -> prefecture }}</span>
-                                                        </div>
-                                                        <div>
-                                                            <span href="#" class="card-link">{{ $post -> age . '代' }}</span>
-                                                        </div>
-                                                        <div>
-                                                            <span href="#" class="card-link">{{ $post -> gender }}</span>
-                                                        </div>
+                                                        <ul class="card-lists">
+                                                            <li class="card-list">{{ $post -> prefecture }}</li>
+                                                            <li class="card-list">{{ $post -> age . '代' }}</li>
+                                                            <li class="card-list">{{ $post -> gender }}</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </a>
@@ -63,11 +69,10 @@
                             @endforeach
                         @endif
                     </div>
-                    <!-- end of .swiper-wrapper -->
                     <div class="swiper-pagination"></div>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection
 

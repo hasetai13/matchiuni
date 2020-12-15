@@ -51,8 +51,14 @@ class PostsController extends Controller
         }else{
             $fileName = 'noimage.png';
         }
-
         //▲画像アップロード
+
+        $rules = [
+            'title' => ['max:40'],
+            'content' => ['max:191'],
+            'area' => ['max:20']
+        ];
+        $this->validate($request, $rules);
 
         $post = new Post;
         $post -> image_path = $fileName;
