@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
-@section('content')
+@section('meta')
+    <meta name="robots" content="noindex" />
+@endsection
 
+@section('content')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-7  mb-5 p-4">
@@ -30,16 +33,16 @@
                     </tbody>
                 </table>
                 <p>{!! nl2br($post -> content) !!}</p>
+
+{{--                <div class="flex-grow-0 py-3 px-4 fixed_btn">--}}
+{{--                    <div class="input-group">--}}
+{{--                        <input type="text" class="form-control" placeholder="コメントを入力"       >--}}
+{{--                        <button class="btn btn-primary">送信</button>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
+
         </div>
-
-{{--        <div class="row mb-4">--}}
-{{--            <div class="col-12 text-center">--}}
-{{--                <a href="/search"><span class="font-weight-bold">＞</span> 検索結果に戻る</a>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-
-
         <div class="row justify-content-center">
             <div class="col-12 col-md-7">
                 <h4>関連するコピユニ</h4>
@@ -73,6 +76,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 @endsection
 
@@ -82,6 +86,17 @@
             background-color: #FF7171;
             color: white;
         }
+
+        .fixed_btn
+        {
+            position: fixed;
+            bottom: 0;
+            left: auto;
+            padding: 6px 40px;
+            z-index: 10;
+            background-color: red;
+        }
+
     </style>
 @endsection
 

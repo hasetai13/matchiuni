@@ -1,9 +1,12 @@
 
 @extends('layouts.app')
 
+@section('meta')
+    <title>@if($request->keyword){{ $request->keyword }}@else全国@endif @if($request->prefecture){{ $request->prefecture }}@endifのコピユニ募集 | コピユニ掲示板 | マチユニ</title>
+    <meta name="description" content="マチユニで「@if($request->keyword){{ $request->keyword }}@else全国@endif @if($request->prefecture){{ $request->prefecture }} @endif」のコピユニの検索結果を見る">
+@endsection
+
 @section('content')
-
-
     <div class="container mb-3">
         <div class="row justify-content-center">
             <div class="col-12 col-md-9">
@@ -72,16 +75,13 @@
                     </div>
                 </div>
                 {{--        条件検索        --}}
-
-
                 {{--        メインコンテンツ--}}
                 <div class="row">
-                    <h5 class="mt-3 mb-4 col-8">検索結果</h5>
+                    <h5 class="mt-3 mb-4 col-8">「@if($request->keyword){{ $request->keyword }}@else全国@endif」@if($request->prefecture)- {{ $request->prefecture }} @endif のコピユニ</h5>
                     <div class="mt-5 mb-4 col-4 text-right position-relative">
                     </div>
                 </div>
                 {{--        メインコンテンツ--}}
-
                 {{--        SP表示--}}
                 @if (count($posts) > 0)
                     @foreach($posts as $post)

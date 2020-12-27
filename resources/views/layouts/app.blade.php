@@ -8,8 +8,7 @@
     <!-- ▲Required meta tags -->
 
     <!-- ▼SEO -->
-    <title>MatchiUni</title>
-    <meta name="description" content="MatchiUni（マチユニ）は日本初のコピユニ募集掲示板です！マチユニを使えば自分が踊りたいコピユニに参加したり、自分でメンバーを集めたりできます！">
+    @yield('meta')
     <!-- ▲SEO -->
 
     <!-- ▼Bootstrap core CSS -->

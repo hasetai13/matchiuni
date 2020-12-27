@@ -1,16 +1,19 @@
 
 @extends('layouts.app')
 
-@section('content')
+@section('meta')
+    <title>投稿| MatchiUni（マチユニ）</title>
+    <meta name="description" content="マチユニでは全国のコピユニ募集情報をまとめて検索できます。K-POPはもちろんJ-POPやアニソンのコピユニも掲載。年齢や場所・グループで絞り込んで、あなたにぴったりのコピユニが見つけられます！">
+    <meta name="robots" content="noindex" />
+@endsection
 
+@section('content')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-7 p-4">
                 <form action="/posts" method="post" enctype="multipart/form-data">
                     <!-- CSRF保護 -->
                     @csrf
-
-
                     {{-- エラーメッセージ --}}
                     @if ($errors->any())
                         <div class="alert alert-danger">
@@ -19,8 +22,6 @@
                             </ul>
                         </div>
                     @endif
-
-
                     <div class="mt-2 mb-4">
                         <div class="row mb-1">
                             <div class="col-12">

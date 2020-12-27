@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('meta')
+    <title>MatchiUni（マチユニ）| すぐに見つかるコピユニ掲示板</title>
+    <meta name="description" content="マチユニでは全国のコピユニ募集情報をまとめて検索できます。K-POPはもちろんJ-POPやアニソンのコピユニも掲載。年齢や場所・グループで絞り込んで、あなたにぴったりのコピユニが見つけられます！">
+@endsection
+
 @section('content')
 
 
@@ -179,7 +184,7 @@
                                         <div class="col-12">
                                             <a href="/posts/{{ $post -> id }}">
                                                 <div class="card">
-                                                    <img class="card-img-top" style="object-fit: cover;" src="uploads/{{ $post -> image_path }}" alt="Card image cap">
+                                                    <img class="card-img-top" style="object-fit: cover;" src="{{ \Config::get('app.mediaPATH') }}uploads/{{ $post -> image_path }}" alt="Card image cap">
                                                     <div class="card-body">
                                                         <p class="card-title">{{ $post -> title }}</p>
                                                         <ul class="card-lists">
