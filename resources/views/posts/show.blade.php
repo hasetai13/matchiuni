@@ -10,7 +10,7 @@
             <div class="col-12 col-md-7  mb-5 p-4">
                 <h5 class="text-center">{{ $post -> title }}</h5>
                 <div class="row justify-content-center mt-3 mb-3">
-                    <img src="/uploads/{{ $post -> image_path }}" alt="img" class="card-img-top col-6" style="object-fit: cover;">
+                    <img src="{{ \Config::get('app.mediaPATH') }}uploads/{{ $post -> image_path }}" alt="img" class="card-img-top col-6" style="object-fit: cover;">
                 </div>
                 <table class="table table-sm table-bordered">
                     <tbody>
@@ -55,7 +55,7 @@
                                         <div class="col-12">
                                             <a href="/posts/{{ $post -> id }}">
                                                 <div class="card">
-                                                    <img class="card-img-top" style="object-fit: cover;" src="/uploads/{{ $post -> image_path }}" alt="Card image cap">
+                                                    <img class="card-img-top" style="object-fit: cover;" src="{{ \Config::get('app.mediaPATH') }}uploads/{{ $post -> image_path }}" alt="Card image cap">
                                                     <div class="card-body">
                                                         <p class="card-title">{{ $post -> title }}</p>
                                                         <ul class="card-lists">

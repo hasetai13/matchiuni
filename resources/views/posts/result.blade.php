@@ -88,7 +88,7 @@
                         <a href="/posts/{{ $post -> id }}">
                             <div class="row pb-2 sidecard">
                                 <div class="col-4 col-md-2  img-hidden">
-                                    <img src="/uploads/{{ $post -> image_path }}" alt="img" class="card-img-top" style="object-fit: cover;">
+                                    <img src="{{ \Config::get('app.mediaPATH') }}uploads/{{ $post -> image_path }}" alt="img" class="card-img-top" style="object-fit: cover;">
                                 </div>
                                 <div class="col-8 col-md-10">
                                     <h6 class="sidecard-title">{{ $post -> title }}</h6>
