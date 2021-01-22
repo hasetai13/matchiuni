@@ -11,6 +11,19 @@
     @yield('meta')
     <!-- ▲SEO -->
 
+    <!-- ▼OGP共通設定 -->
+    <!-- ※基本共通設定 -->
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ config('app.url') }}" />
+    <meta property="og:site_name" content="MatchiUni" />
+
+    @yield('ogp')
+
+    <!-- ※Twitter共通設定 -->
+    <meta content='summary_large_image' name='twitter:card'/>
+
+
     <!-- ▼Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- ▲Bootstrap core CSS -->

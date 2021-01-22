@@ -4,6 +4,12 @@
     <meta name="robots" content="noindex" />
 @endsection
 
+@section('ogp')
+    <meta property="og:title" content="{{ $post -> title }}" />
+    <meta property="og:description" content="{{ $post -> content }}" />
+    <meta property="og:image" content="/posts/{{ $post->id }}/ogp" />
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">

@@ -127,4 +127,72 @@ class PostsController extends Controller
         //
     }
 
+    public function ogp($id)
+    {
+
+        $ogp_w = 600;
+        $ogp_h = 315;
+
+        // １行の文字数
+        $partLength = 20;
+        $fontSize = 19;
+        $disc_fontSize = 18;
+        $fontPath = public_path('fonts/mushin.otf');
+        $file = public_path('img/ogp_image.jpg');
+        $image = \imagecreatetruecolor($ogp_w,$ogp_h);
+
+        $post = Post::find($id);
+
+        //元の画像のサイズを取得する
+        list($w, $h) = getimagesize($file);
+
+
+        // 背景画像を描画
+        $bg = \imagecreatefromjpeg($file);
+        imagecopyresampled($image, $bg, 0, 0, 0, 0, $ogp_w, $ogp_h, $w, $h);
+
+
+        $color = imagecolorallocate($image, 0, 0, 0);
+
+        // 各行に分割
+        $parts = [];
+        $disc_parts = [];
+        $title = "梅田でFeelSpecialやりませんか？？DMお待ちしてます！メンバーみんな初心者なので気軽に参加してください！";
+
+        $length = mb_strlen($post->title);
+        for ($start = 0; $start < $length; $start += $partLength) {
+            $parts[] = mb_substr($post->title, $start, $partLength);
+        }
+
+        // テキストを描画
+        $this->title_drawParts($image, $parts, $ogp_w, $ogp_h, $fontSize, $fontPath, $color);
+
+//        ob_start();
+//        imagepng($image);
+//        $content = ob_get_clean();
+//
+//        // 画像としてレスポンスを返す
+//        return response($content)->header('Content-Type', 'image/png');
+
+        header('Content-Type: image/png');
+
+        imagepng($image);
+    }
+
+    /**
+     * 各行の描画メソッド
+     */
+    public function title_drawParts($image, $parts, $ogp_w, $ogp_h, $fontSize, $fontPath, $color, $offset = 0)
+    {
+        foreach ($parts as $i => $part) {
+            // サイズを計算
+            $box = \imagettfbbox($fontSize, 0, $fontPath, $part);
+            $boxWidth = $box[4] - $box[6];
+            $boxHeight = $box[1] - $box[7];
+            // 位置を計算
+            $x = ($ogp_w - $boxWidth) / 2;
+            $y = $ogp_h / 2 + $boxHeight / 2 - $boxHeight * count($parts) * 0.5 + $boxHeight * $i;
+            \imagettftext($image, $fontSize, 0, $x + $offset, $y + $offset, $color, $fontPath, $part);
+        }
+    }
 }
