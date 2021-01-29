@@ -81,7 +81,7 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request, $id)
     {
         $posts = Post::take(5)->orderBy('updated_at', 'desc')->get();
 
@@ -90,6 +90,7 @@ class PostsController extends Controller
         return view('posts.show', [
             'post' => $post,
             'posts' => $posts,
+            'request' => $request,
         ]);
     }
 

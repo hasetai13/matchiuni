@@ -30,6 +30,17 @@ Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
+
+/*
+    Twitter認証機能
+*/
+// ログインURL
+Route::get('auth/twitter', 'Auth\TwitterController@redirectToProvider');
+// コールバックURL
+Route::get('auth/twitter/callback', 'Auth\TwitterController@handleProviderCallback');
+
+
+
 // RESTful
 Route::resource('posts', 'PostsController');
 

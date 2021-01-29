@@ -13,7 +13,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-7  mb-5 p-4">
+            <div class="col-12 col-md-7 mb-3 p-4">
                 <h5 class="text-center">{{ $post -> title }}</h5>
                 <div class="row justify-content-center mt-3 mb-3">
                     <img src="{{ \Config::get('app.mediaPATH') }}uploads/{{ $post -> image_path }}" alt="img" class="card-img-top col-6" style="object-fit: cover;">
@@ -39,13 +39,9 @@
                     </tbody>
                 </table>
                 <p>{!! nl2br($post -> content) !!}</p>
-
-{{--                <div class="flex-grow-0 py-3 px-4 fixed_btn">--}}
-{{--                    <div class="input-group">--}}
-{{--                        <input type="text" class="form-control" placeholder="コメントを入力"       >--}}
-{{--                        <button class="btn btn-primary">送信</button>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                <a href="https://twitter.com/messages/compose?recipient_id={{ ($post->user->tw_id) }}&text={{ url()->current() }} こちらの募集はまだ行われてますでしょうか？">
+                    <button type="submit" class="btn btn-danger btn-block mt-5">メッセージを送る</button>
+                </a>
             </div>
 
         </div>
@@ -100,7 +96,7 @@
             left: auto;
             padding: 6px 40px;
             z-index: 10;
-            background-color: red;
+            margin: 0 auto;
         }
 
     </style>
