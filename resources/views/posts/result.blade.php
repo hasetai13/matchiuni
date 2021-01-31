@@ -77,7 +77,7 @@
                 {{--        条件検索        --}}
                 {{--        メインコンテンツ--}}
                 <div class="row">
-                    <h5 class="mt-3 mb-4 col-8">「@if($request->keyword){{ $request->keyword }}@else全国@endif」@if($request->prefecture)- {{ $request->prefecture }} @endif のコピユニ</h5>
+                    <h5 class="mt-3 mb-4 col-12 col-md-8">「@if($request->keyword){{ $request->keyword }}@else全国@endif」@if($request->prefecture)- {{ $request->prefecture }} @endif のコピユニ</h5>
                     <div class="mt-5 mb-4 col-4 text-right position-relative">
                     </div>
                 </div>
