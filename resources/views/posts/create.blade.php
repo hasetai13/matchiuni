@@ -25,14 +25,8 @@
                     <div class="mt-2 mb-4">
                         <div class="row mb-1">
                             <div class="col-12">
-                                <div class="input-group">
-                                    <label class="input-group-btn">
-                                        <span class="btn btn-primary">
-                                            画像を選択<input type="file" name="file_path" style="display:none;">
-                                        </span>
-                                    </label>
-                                    <input type="text" class="form-control" readonly="" style="margin-top:6px;">
-                                </div>
+                                <label class="form-label" for="customFile">画像を選択してください</label>
+                                <input type="file" class="form-control" id="customFile" />
                                 <div class="form-group">
                                     <label for="InputTitle">タイトル/本文<span>*</span></label>
                                     <input type="text" class="form-control" name="title" id="InputTitle" aria-describedby="titleHelp" placeholder="BTSのコピユニメンバー募集！" required>
@@ -42,7 +36,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="InputTitle">都道府県<span>*</span></label>
-                                    <select class="custom-select" name="prefecture" required>
+                                    <select class="form-select" name="prefecture" required>
                                         <option value="" selected>都道府県を選択</option>
                                         <option value="北海道">北海道</option>
                                         <option value="青森県">青森県</option>
@@ -116,7 +110,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="InputTitle">年齢<span>*</span></label>
-                                    <select class="custom-select" name="age" required>
+                                    <select class="form-select" name="age" required>
                                         <option selected value="">年齢を選択</option>
                                         <option value="10">10代</option>
                                         <option value="20">20代</option>
@@ -127,7 +121,7 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-danger btn-block">投稿する</button>
+                    <button type="submit" class="btn btn-danger btn-block">コピユニを募集する</button>
                     <div class="row mt-3">
                         <div class="col-12 text-center">
                             <a href="/">＞トップに戻る</a>

@@ -62,6 +62,11 @@ header div:first-child{
     margin: 0;
 }
 
+.navbar {
+    padding-top: .5rem;
+    padding-bottom: 0;
+}
+
 .swiper-container .card .card-list {
     font-size: 11px;
 }
@@ -146,4 +151,68 @@ header div:first-child{
 /*各コンテンツのスタイル*/
 .group-section span {
     font-size: 0.875rem;
+}
+
+
+/*リストの装飾*/
+.list207 ol {
+    padding: 0;
+    list-style-type: none;
+    border: none;
+    counter-reset: number;
+}
+.list207 ol li {
+    position: relative;
+    line-height: 1.5;
+    padding: 0.5em 0 0.5em 1.6em;
+}
+.list207 ol li:before {
+    position: absolute;
+    font-family: "Quicksand", sans-serif;
+    content: counter(number);
+    counter-increment: number;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ee8992;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 22px;
+}
+
+/*見出しの装飾*/
+/*.heading {*/
+/*    border-left: 10px solid #cc3366; !* 左ボーダーを、10px幅の実線、線色#CC3366に *!*/
+/*}*/
+
+
+.heading {
+    position: relative;
+    margin: 0 0 1.5em;
+    padding: 0.8em 0 0.8em 1.5em;
+    /*border: 2px solid #B92A2C;*/
+    font-size: 1.143em;
+    font-weight: bold;
+}
+
+.heading:before{
+    content: "";
+    position: absolute;
+    background: #B92A2C;
+    top: 50%;
+    left: 0.5em;
+    margin-top :-15px;
+    height: 30px;
+    width: 8px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+
+.rounded {
+    border-radius: 50px; /* ちょっとだけ角丸 */
 }

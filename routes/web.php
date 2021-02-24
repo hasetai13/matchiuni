@@ -39,6 +39,8 @@ Route::get('auth/twitter', 'Auth\TwitterController@redirectToProvider');
 // コールバックURL
 Route::get('auth/twitter/callback', 'Auth\TwitterController@handleProviderCallback');
 
+Route::get('test', 'TwitterController@index');
+
 
 
 // RESTful
@@ -49,6 +51,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // ユーザ機能
-Route::group(['middleware' => 'auth'], function () {
-    Route::resource('posts', 'PostsController', ['only' => ['create', 'store']]); //投稿フォームと投稿
-});
+//Route::group(['middleware' => 'auth'], function () {
+//    Route::resource('posts', 'PostsController', ['only' => ['create', 'store']]); //投稿フォームと投稿
+//});

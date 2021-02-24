@@ -11,6 +11,13 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-9">
                 {{--        条件検索        --}}
+                <nav class="mt-3" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/">トップ</a></li>
+                        <li class="breadcrumb-item"><a href="#">全国のコピユニ</a></li>
+                    </ol>
+                </nav>
+
                 <div class="con-search mt-4">
                     <div class="row">
                         <div class="col-12">
@@ -24,7 +31,7 @@
                                     <h5>都道府県</h5>
                                 </div>
                                 <div class="col-8">
-                                    <select class="custom-select" name="prefecture">
+                                    <select class="form-select" name="prefecture">
                                         <option value="" selected>都道府県を選択</option>
                                         @foreach($prefs as $pref)
                                             <option value="{{ $pref }}" @if($request->prefecture == $pref ) selected @endif >{{ $pref }}</option>
@@ -37,7 +44,7 @@
                                     <h5>年齢</h5>
                                 </div>
                                 <div class="col-8">
-                                    <select class="custom-select" name="age">
+                                    <select class="form-select" name="age">
                                         <option value="" selected>年齢を選択</option>
                                         @foreach($ages as $age)
                                             <option value="{{ $age }}" @if($request->age == $age ) selected @endif >{{ $age . '代' }}</option>
@@ -50,7 +57,7 @@
                                     <h5>性別</h5>
                                 </div>
                                 <div class="col-8">
-                                    <select class="custom-select" name="gender">
+                                    <select class="form-select" name="gender">
                                         <option value="" selected>性別を選択</option>
                                         @foreach($genders as $gender)
                                             <option value="{{ $gender }}" @if($request->gender == $gender ) selected @endif >{{ $gender }}</option>
@@ -77,9 +84,7 @@
                 {{--        条件検索        --}}
                 {{--        メインコンテンツ--}}
                 <div class="row">
-                    <h5 class="mt-3 mb-4 col-12 col-md-8">「@if($request->keyword){{ $request->keyword }}@else全国@endif」@if($request->prefecture)- {{ $request->prefecture }} @endif のコピユニ</h5>
-                    <div class="mt-5 mb-4 col-4 text-right position-relative">
-                    </div>
+                    <h5 class="mt-3 mb-3 col-12 col-md-8">「@if($request->keyword){{ $request->keyword }}@else全国@endif」@if($request->prefecture)- {{ $request->prefecture }} @endif のコピユニ</h5>
                 </div>
                 {{--        メインコンテンツ--}}
                 {{--        SP表示--}}
@@ -92,7 +97,7 @@
                                 </div>
                                 <div class="col-8 col-md-10">
                                     <h6 class="sidecard-title">{{ $post -> title }}</h6>
-                                    <div class="sidecard-body position-absolute" style="bottom: 0px;">
+                                    <div class="sidecard-body position-absolute" style="">
                                         <ul>
                                             <li>{{ $post -> prefecture }}</li>
                                             <li>{{ $post -> gender }}</li>
@@ -105,7 +110,9 @@
                         </a>
                     @endforeach
                 @endif
-                {{--        SP表示--}}
+                <div class="row">
+                    <h5 class="mt-5 mb-3 col-12 col-md-8">他の人はこんな検索をしています</h5>
+                </div>
             </div>
         </div>
     </div>

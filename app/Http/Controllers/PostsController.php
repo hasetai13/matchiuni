@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
+use App\User;
 
 class PostsController extends Controller
 {
@@ -18,8 +19,19 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::take(10)->orderBy('updated_at', 'desc')->get();
+        $posts_bts = Post::take(5)
+            ->where('title', 'LIKE', "%BTS%")
+            ->orwhere('content', 'LIKE', "%BTS%")
+            ->orderBy('updated_at', 'desc')->get();
+        $posts_twice = Post::take(5)
+            ->where('title', 'LIKE', "%twice%")
+            ->orwhere('content', 'LIKE', "%twice%")
+            ->orderBy('updated_at', 'desc')->get();
+
         return view('posts.index', [
-            'posts' => $posts
+            'posts' => $posts,
+            'posts_bts' => $posts_bts,
+            'posts_twice' => $posts_twice,
         ]);
     }
 
@@ -30,9 +42,10 @@ class PostsController extends Controller
      */
     public function create()
     {
-        if (\Auth::check()) {
-            return view('posts.create');
-        }
+//        if (\Auth::check()) {
+//            return view('posts.create');
+//        }
+        return view('posts.create');
     }
 
     /**
@@ -72,7 +85,10 @@ class PostsController extends Controller
         $post -> age = $request -> age;
         $post -> user_id = Auth::user()->id;
         $post -> save();
-        return redirect('/');
+
+        $user_id = Auth::id();
+        $latest_post_id = Post::where('user_id',"{$user_id}")->latest()->first()->id;
+        return redirect('/posts/' . $latest_post_id);
     }
 
     /**
