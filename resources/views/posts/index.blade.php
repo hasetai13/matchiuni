@@ -14,7 +14,7 @@
 {{--        <p class="text-white">イベント応募からコピユニ募集まで、<br>コピユニライフはすべてここだけで完結。</p>--}}
 {{--    </div>--}}
 <!-- Jumbotron -->
-<div class="p-5 text-center text-white"; style="background-image: url('/img/637633961.jpg'); background-size: cover; background-position:50% 65%;">
+<div class="p-5 text-center text-white"; style="background-image: url('/img/image1.jpg'); background-size: cover; background-position:50% 65%;">
     <h3 class="font-weight-bold">マチユニで簡単にコピユニを結成・参加！</h3>
     <div class="row mt-4 justify-content-center">
         <div class="col-12 col-md-3 mb-4">
@@ -324,20 +324,20 @@
                         <div class="col-6">
                             <div class="row d-flex position-relative">
                                 <div class="col-7">
-                                    <img class="card-img-top rounded" src="/img/tokyo.jpg" alt="Card image cap" style="height:auto;">
+                                    <img class="card-img-top rounded" src="{{ \Config::get('app.mediaPATH') }}img/tokyo.jpg" alt="Card image cap" style="height:auto;">
                                 </div>
                                 <div class="col-5 d-flex align-items-center position-static">
-                                    <a href="/search/?keyword=BTS" class="stretched-link"><span>BTS</span></a>
+                                    <a href="/search/?prefecture=東京都" class="stretched-link"><span>東京都</span></a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="row d-flex position-relative">
                                 <div class="col-7">
-                                    <img class="card-img-top rounded" src="/img/tokyo.jpg" alt="Card image cap" style="height:auto;">
+                                    <img class="card-img-top rounded" src="{{ \Config::get('app.mediaPATH') }}img/osaka.jpg" alt="Card image cap" style="height:auto;">
                                 </div>
                                 <div class="col-5 d-flex align-items-center position-static">
-                                    <a href="/search/?keyword=BTS" class="stretched-link"><span>TWICE</span></a>
+                                    <a href="/search/?prefecture=大阪府" class="stretched-link"><span>大阪府</span></a>
                                 </div>
                             </div>
                         </div>
